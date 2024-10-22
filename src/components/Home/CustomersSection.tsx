@@ -10,13 +10,16 @@ function CustomersSection() {
   const customers = [
     { name: "IDEX", logo: idex },
     { name: "NTPC", logo: ntpc },
-    { name: "IDEX", logo: idex },
-    { name: "IDEX", logo: idex },
     { name: "BRBCL", logo: brbcl },
-    { name: "IDEX", logo: idex },
-    { name: "IDEX", logo: idex },
     { name: "NHPCL", logo: nhpcl },
     { name: "IDEX", logo: idex },
+    { name: "NTPC", logo: ntpc },
+    { name: "BRBCL", logo: brbcl },
+    { name: "NHPCL", logo: nhpcl },
+    { name: "IDEX", logo: idex },
+    { name: "NTPC", logo: ntpc },
+    { name: "BRBCL", logo: brbcl },
+    { name: "NHPCL", logo: nhpcl },
     // Add more customers to create a longer list for continuous scrolling
   ];
 
@@ -51,9 +54,9 @@ function CustomersSection() {
                 <img
                   src={customer.logo}
                   alt={customer.name}
-                  className="w-24 h-24 mx-auto mb-4"
+                  className="w-14 h-14 mx-auto mb-4"
                 />
-                <h3 className="text-xl font-semibold mb-2 text-card-foreground text-center">
+                <h3 className="text-xl font-semibold text-card-foreground text-center">
                   {customer.name}
                 </h3>
               </div>
