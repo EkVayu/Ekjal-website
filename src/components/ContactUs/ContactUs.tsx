@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { send } from "emailjs-com";
 import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const contactData = {
   title: "Secure Your Digital Future",
@@ -34,7 +34,7 @@ const ContactUs = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -42,16 +42,11 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
-    send(
-      "service_38wfp9b", 
-      "template_135hx16", 
-      formData, 
-      "UDeSdxGM5QQQpWLqb"
-    )
-      .then((response) => {
+    send("service_38wfp9b", "template_135hx16", formData, "UDeSdxGM5QQQpWLqb")
+      .then(() => {
         toast.success("Message sent successfully!", {
           position: "top-center",
           autoClose: 3000,
@@ -152,14 +147,14 @@ const ContactUs = () => {
                   <input
                     type={field.type}
                     id={field.id}
-                    value={formData[field.id]}
+                    value={formData[field.id as keyof typeof formData]}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-2 border border-foreground/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder={`Your ${field.label}`}
                   />
                 </div>
               </motion.div>
-            ))}
+            ))}{" "}
             <motion.div
               className="mb-6"
               initial={{ opacity: 0, y: 20 }}
