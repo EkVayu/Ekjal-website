@@ -3,7 +3,7 @@ import { send } from "emailjs-com";
 import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const contactData = {
   title: "Secure Your Digital Future",
@@ -34,7 +34,9 @@ const ContactUs = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -42,16 +44,16 @@ const ContactUs = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     send(
-      "service_38wfp9b", 
-      "template_135hx16", 
-      formData, 
-      "UDeSdxGM5QQQpWLqb"
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formData,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
-      .then((response) => {
+      .then(() => {
         toast.success("Message sent successfully!", {
           position: "top-center",
           autoClose: 3000,
@@ -60,7 +62,6 @@ const ContactUs = () => {
           pauseOnHover: true,
           draggable: true,
         });
-        // Clear form fields
         setFormData({
           user_name: "",
           user_email: "",
@@ -79,8 +80,8 @@ const ContactUs = () => {
           draggable: true,
         });
       });
-  };
 
+  };
   return (
     <div className="">
       <ToastContainer />
@@ -152,7 +153,7 @@ const ContactUs = () => {
                   <input
                     type={field.type}
                     id={field.id}
-                    value={formData[field.id]}
+                    value={formData[field.id as keyof typeof formData]}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-2 border border-foreground/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder={`Your ${field.label}`}
