@@ -1,5 +1,9 @@
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { send } from "emailjs-com";
 import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const contactData = {
   title: "Secure Your Digital Future",
@@ -7,9 +11,9 @@ const contactData = {
     "Connect with our cybersecurity experts to safeguard your digital assets and ensure your peace of mind.",
   formTitle: "Get in Touch",
   inputFields: [
-    { id: "name", label: "Name", type: "text", icon: <FaUser /> },
-    { id: "email", label: "Email", type: "email", icon: <FaEnvelope /> },
-    { id: "phone", label: "Phone", type: "tel", icon: <FaPhone /> },
+    { id: "user_name", label: "Name", type: "text", icon: <FaUser /> },
+    { id: "user_email", label: "Email", type: "email", icon: <FaEnvelope /> },
+    { id: "user_phone", label: "Phone", type: "tel", icon: <FaPhone /> },
   ],
   messageField: {
     id: "message",
@@ -23,8 +27,63 @@ const contactData = {
 };
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    user_phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    send(
+      "service_38wfp9b", 
+      "template_135hx16", 
+      formData, 
+      "UDeSdxGM5QQQpWLqb"
+    )
+      .then((response) => {
+        toast.success("Message sent successfully!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        // Clear form fields
+        setFormData({
+          user_name: "",
+          user_email: "",
+          user_phone: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Failed to send message:", error);
+        toast.error("Failed to send message. Please try again.", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      });
+  };
+
   return (
     <div className="">
+      <ToastContainer />
       <motion.div
         className="w-full min-h-screen rounded-md shadow-2xl overflow-hidden flex flex-col lg:flex-row"
         initial={{ opacity: 0, y: 50 }}
@@ -62,7 +121,6 @@ const ContactUs = () => {
           </div>
         </div>
 
-        {/* Right side with form */}
         <div className="lg:w-1/2 p-8 sm:p-12">
           <motion.h3
             className="text-3xl font-bold text-foreground mb-8"
@@ -72,7 +130,7 @@ const ContactUs = () => {
           >
             {contactData.formTitle}
           </motion.h3>
-          <form>
+          <form onSubmit={handleSubmit}>
             {contactData.inputFields.map((field, index) => (
               <motion.div
                 key={field.id}
@@ -94,6 +152,8 @@ const ContactUs = () => {
                   <input
                     type={field.type}
                     id={field.id}
+                    value={formData[field.id]}
+                    onChange={handleChange}
                     className="w-full pl-10 pr-4 py-2 border border-foreground/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder={`Your ${field.label}`}
                   />
@@ -114,6 +174,8 @@ const ContactUs = () => {
               </label>
               <textarea
                 id={contactData.messageField.id}
+                value={formData.message}
+                onChange={handleChange}
                 rows={contactData.messageField.rows}
                 className="w-full px-4 py-2 border border-foreground/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
                 placeholder={contactData.messageField.placeholder}
@@ -121,10 +183,6 @@ const ContactUs = () => {
             </motion.div>
             <motion.button
               type="submit"
-              onClick={(e) => {
-                e.preventDefault();
-                alert("Form submitted!");
-              }}
               className="w-full bg-primary text-secondary py-3 px-4 rounded-lg hover:bg-primary/90"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
