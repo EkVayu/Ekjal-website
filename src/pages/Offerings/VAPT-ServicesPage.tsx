@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import cyber from "@/assets/Products/cyber.avif";
+import cyber from "../../assets/Products/cyber.avif";
 import { Link } from "react-router-dom";
 
 const VAPTServicesPage = () => {

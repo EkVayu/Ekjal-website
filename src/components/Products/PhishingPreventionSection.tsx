@@ -1,4 +1,4 @@
-import phishing from "@/assets/Products/phishing.png";
+import phishing from "../../assets/Products/phishing.png";
 
 const phishingPreventionData = {
   title: "Phishing Prevention Tool",

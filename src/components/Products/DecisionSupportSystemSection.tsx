@@ -1,4 +1,4 @@
-import discussion from "@/assets/Products/discussion.png";
+import discussion from "../../assets/Products/discussion.png";
 
 const decisionSupportSystemData = {
   title: "Decision Support System",

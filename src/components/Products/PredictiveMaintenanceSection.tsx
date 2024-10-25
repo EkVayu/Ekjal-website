@@ -1,4 +1,4 @@
-import predictive from "@/assets/Products/predictive.png";
+import predictive from "../../assets/Products/predictive.png";
 
 const predictiveMaintenanceData = {
   title: "Predictive Maintenance for Machines",

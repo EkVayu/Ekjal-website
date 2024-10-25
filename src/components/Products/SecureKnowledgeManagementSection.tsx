@@ -1,4 +1,4 @@
-import customersupport from "@/assets/Products/customer-support.png";
+import customersupport from "../../assets/Products/customer-support.png";
 
 const secureKnowledgeManagementData = {
   title: "Secure Knowledge Management",

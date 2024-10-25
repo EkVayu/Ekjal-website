@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import image from "@/assets/Home-page-images/3834682.jpg";
+import image from "../../assets/Home-page-images/3834682.jpg";
 import { Link } from "react-router-dom";
 
 const data = {
