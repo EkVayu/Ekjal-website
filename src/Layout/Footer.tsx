@@ -69,7 +69,7 @@ function Footer() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 mr-2" />
-                  <span>pravin@ekvayu.com</span>
+                  <span>pravin@ekjal.com</span>
                 </div>
                 <div className="flex items-start">
                   <MapPin className="h-5 w-5 mr-2 mt-1" />
@@ -77,6 +77,7 @@ function Footer() {
                 </div>
               </div>
             </div>
+          
 
             {footerSections.map((section, index) => (
               <div key={index}>

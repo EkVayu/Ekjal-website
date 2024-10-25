@@ -15,7 +15,7 @@ const jobOpeningsData: JobOpening[] = [
   {
     title: "Cyber Security Consultant",
     experience: "2-5 years",
-    location: "JSS Noida UP, Onsite",
+    location: "Noida UP, Onsite",
     description:
       "We are seeking skilled Cyber Security Consultants to join our team and help protect our clients' digital assets.",
     roles: ["Junior Consultant", "Senior Consultant", "Team Lead"],
@@ -24,7 +24,7 @@ const jobOpeningsData: JobOpening[] = [
   {
     title: "VAPT Tester",
     experience: "3-6 years",
-    location: "JSS Noida UP, Onsite",
+    location: "Noida UP, Onsite",
     description:
       "Join our VAPT team to conduct thorough vulnerability assessments and penetration testing for our clients.",
     roles: ["Junior Tester", "Senior Tester", "VAPT Lead"],
@@ -33,7 +33,7 @@ const jobOpeningsData: JobOpening[] = [
   {
     title: "Embedded Security Specialist",
     experience: "4-7 years",
-    location: "JSS Noida UP, Onsite",
+    location: "Noida UP, Onsite",
     description:
       "We're looking for an Embedded Security Specialist to secure IoT and embedded systems for our clients.",
     roles: ["Security Engineer", "Senior Security Engineer", "Technical Lead"],
@@ -42,7 +42,7 @@ const jobOpeningsData: JobOpening[] = [
   {
     title: "Threat Intelligence Analyst",
     experience: "2-4 years",
-    location: "JSS Noida UP, Onsite",
+    location: "Noida UP, Onsite",
     description:
       "Join our Threat Intelligence team to analyze and respond to emerging cyber threats and vulnerabilities.",
     roles: ["Junior Analyst", "Senior Analyst", "Team Coordinator"],
@@ -51,7 +51,7 @@ const jobOpeningsData: JobOpening[] = [
   {
     title: "Security Operations Center (SOC) Analyst",
     experience: "1-3 years",
-    location: "JSS Noida UP, Onsite",
+    location: "Noida UP, Onsite",
     description:
       "We're seeking SOC Analysts to monitor, detect, and respond to security incidents in real-time.",
     roles: ["L1 Analyst", "L2 Analyst", "SOC Team Lead"],
@@ -60,7 +60,7 @@ const jobOpeningsData: JobOpening[] = [
   {
     title: "Cloud Security Architect",
     experience: "5-8 years",
-    location: "JSS Noida UP, Onsite",
+    location: "Noida UP, Onsite",
     description:
       "Design and implement secure cloud infrastructure and solutions for our enterprise clients.",
     roles: ["Cloud Security Engineer", "Senior Cloud Security Architect"],
