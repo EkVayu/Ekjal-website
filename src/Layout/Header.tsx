@@ -6,6 +6,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import { ChevronDown, Menu, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -44,53 +52,85 @@ function Header() {
             <img src={logo} className="h-8 rounded-sm" alt="Ekjal logo" />
             <span className="text-2xl font-semibold">Ekjal</span>
           </Link>
-          <nav className="hidden md:flex space-x-10">
-            {navItems.map((item, index) => (
-              <Link
-                key={index}
-                to={item.link}
-                className={`text-sm font-medium hover:underline uppercase tracking-wider ${
-                  location.pathname === item.link
-                    ? "text-primary underline"
-                    : "hover:text-primary"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
 
-            <DropdownMenu>
-              <DropdownMenuTrigger className="text-sm font-medium hover:underline hover:text-primary uppercase tracking-wider flex gap-1 outline-none">
-                Offerings <ChevronDown className="w-5 h-5" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                {offeringItems.map((item, index) => (
-                  <DropdownMenuItem
-                    key={index}
-                    className="uppercase text-foreground p-0 mb-2"
+          <nav className="hidden md:flex space-x-10">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={`px-3 py-2 hover:underline hover:text-primary rounded-md bg-transparent font-normal tracking-wider uppercase ${
+                      location.pathname === "/products"
+                        ? "text-primary underline"
+                        : "text-foreground"
+                    }`}
+                    asChild
                   >
-                    <Link
-                      to={item.link}
-                      className={`w-full p-2 rounded-md
-                      ${
-                        location.pathname === item.link
-                          ? "bg-primary text-secondary"
-                          : "hover:bg-primary hover:text-secondary"
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                    <Link to={"/products"}>Products</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger
+                    className={`hover:text-primary font-normal bg-transparent text-base uppercase ${
+                      offeringItems.some(
+                        (item) => location.pathname === item.link
+                      )
+                        ? "text-primary underline"
+                        : "text-foreground"
+                    }`}
+                  >
+                    Offerings
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid gap-2 p-4 w-[400px]">
+                      {offeringItems.map((item, index) => (
+                        <NavigationMenuLink
+                          key={index}
+                          className={`block px-3 py-2 rounded-md ${
+                            location.pathname === item.link
+                              ? "bg-primary text-white"
+                              : "hover:bg-primary hover:text-white"
+                          }`}
+                          asChild
+                        >
+                          <Link to={item.link}>{item.name}</Link>
+                        </NavigationMenuLink>
+                      ))}
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={`px-3 py-2 hover:underline hover:text-primary rounded-md bg-transparent font-normal tracking-wider uppercase ${
+                      location.pathname === "/jobs"
+                        ? "text-primary underline"
+                        : "text-foreground"
+                    }`}
+                    asChild
+                  >
+                    <Link to={"/jobs"}>Jobs</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    className={`px-3 py-2 hover:underline hover:text-primary rounded-md bg-transparent font-normal tracking-wider uppercase ${
+                      location.pathname === "/about-us"
+                        ? "text-primary underline"
+                        : "text-foreground"
+                    }`}
+                    asChild
+                  >
+                    <Link to={"/about-us"}>About Us</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </nav>
 
           <div className="flex items-center space-x-4">
             <Button variant="default" asChild className="hidden md:flex">
               <Link to="/contact-us">
                 <Phone className="h-4 w-4 mr-2" />
-                <span className="">Contact Us</span>
+                <span>Contact Us</span>
               </Link>
             </Button>
             <SheetTrigger className="md:hidden">
@@ -99,7 +139,6 @@ function Header() {
             </SheetTrigger>
           </div>
 
-          {/* Mobile navigation  */}
           <SheetContent className="flex flex-col bg-background">
             <SheetHeader className="border-b pb-4 mb-4">
               <SheetTitle className="text-2xl font-bold">Menu</SheetTitle>
