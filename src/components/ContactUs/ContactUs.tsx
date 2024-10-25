@@ -27,6 +27,7 @@ const contactData = {
 };
 
 const ContactUs = () => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     user_name: "",
     user_email: "",
@@ -46,7 +47,7 @@ const ContactUs = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    setLoading(true);
     send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -68,6 +69,7 @@ const ContactUs = () => {
           user_phone: "",
           message: "",
         });
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Failed to send message:", error);
@@ -79,8 +81,8 @@ const ContactUs = () => {
           pauseOnHover: true,
           draggable: true,
         });
+        setLoading(false);
       });
-
   };
   return (
     <div className="">
@@ -153,6 +155,7 @@ const ContactUs = () => {
                   <input
                     type={field.type}
                     id={field.id}
+                    required
                     value={formData[field.id as keyof typeof formData]}
                     onChange={handleChange}
                     className="w-full pl-10 pr-4 py-2 border border-foreground/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
@@ -176,6 +179,7 @@ const ContactUs = () => {
               <textarea
                 id={contactData.messageField.id}
                 value={formData.message}
+                required
                 onChange={handleChange}
                 rows={contactData.messageField.rows}
                 className="w-full px-4 py-2 border border-foreground/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
@@ -188,10 +192,10 @@ const ContactUs = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ scale: 1.05 }}
+              // whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {contactData.submitButton.text}
+              {loading ? "Sending..." : contactData.submitButton.text}
             </motion.button>
           </form>
         </div>
