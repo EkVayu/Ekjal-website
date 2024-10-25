@@ -2,12 +2,12 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import img1 from "@/assets/services/insurance_3577279.png";
-import img2 from "@/assets/services/cyber-security_10429930.png";
-import img3 from "@/assets/services/safety-car_6747875.png";
-import img4 from "@/assets/services/public-domain_5047631.png";
-import img5 from "@/assets/services/recovery_7394483.png";
-import img6 from "@/assets/services/usb_12538296.png";
+import img1 from "../../assets/services/insurance_3577279.png";
+import img2 from "../../assets/services/cyber-security_10429930.png";
+import img3 from "../../assets/services/safety-car_6747875.png";
+import img4 from "../../assets/services/public-domain_5047631.png";
+import img5 from "../../assets/services/recovery_7394483.png";
+import img6 from "../../assets/services/usb_12538296.png";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 

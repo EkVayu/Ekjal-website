@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import ntpc from "@/assets/Customer/ntpc.png";
-import brbcl from "@/assets/Customer/brbcl.jpg";
-import nhpcl from "@/assets/Customer/nhpcl.jpg";
-import idex from "@/assets/Customer/idex.jpg";
+import ntpc from "../../assets/Customer/ntpc.png";
+import brbcl from "../../assets/Customer/brbcl.jpg";
+import nhpcl from "../../assets/Customer/nhpcl.jpg";
+import idex from "../../assets/Customer/idex.jpg";
 
 const clientsData = {
   sectionTitle:

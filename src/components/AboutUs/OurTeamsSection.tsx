@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import pravin from "@/assets/AboutUs/pravin.png";
-import neeraj from "@/assets/AboutUs/neeraj.jpg";
-import sandeep from "@/assets/AboutUs/Sandeep.png";
+import pravin from "../../assets/AboutUs/pravin.png";
+import neeraj from "../../assets/AboutUs/neeraj.jpg";
+import sandeep from "../../assets/AboutUs/Sandeep.png";
 import { Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 

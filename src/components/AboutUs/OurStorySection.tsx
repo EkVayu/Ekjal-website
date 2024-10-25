@@ -1,4 +1,4 @@
-import groupImg from "@/assets/Products/group.avif";
+import groupImg from "../../assets/Products/group.avif";
 
 const ourStoryData = {
   image: groupImg,

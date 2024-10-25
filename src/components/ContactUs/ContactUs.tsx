@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { send } from "emailjs-com";
 import { FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -160,7 +160,7 @@ const ContactUs = () => {
                   />
                 </div>
               </motion.div>
-            ))}
+            ))}{" "}
             <motion.div
               className="mb-6"
               initial={{ opacity: 0, y: 20 }}

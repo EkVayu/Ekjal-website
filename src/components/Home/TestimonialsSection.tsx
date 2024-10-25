@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
-import img1 from "@/assets/testimonials/1.jpg";
-import img2 from "@/assets/testimonials/2.jpg";
-import img3 from "@/assets/testimonials/3.jpg";
-import img4 from "@/assets/testimonials/4.jpg";
-import img5 from "@/assets/testimonials/5.jpg";
+import img1 from "../../assets/testimonials/1.jpg";
+import img2 from "../../assets/testimonials/2.jpg";
+import img3 from "../../assets/testimonials/3.jpg";
+import img4 from "../../assets/testimonials/4.jpg";
+import img5 from "../../assets/testimonials/5.jpg";
 
 const testimonials = [
   {

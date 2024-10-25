@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import worldMap from "@/assets/world-map.png";
+import worldMap from "../../assets/world-map.png";
 
 function CustomersLocatedSection() {
   const [containerWidth, setContainerWidth] = useState(0);

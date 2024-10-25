@@ -1,4 +1,4 @@
-import scm from "@/assets/Products/scm.png";
+import scm from "../../assets/Products/scm.png";
 
 const scmSecurityData = {
   title: "SCM Security – Automotive",

@@ -9,12 +9,12 @@ import { Button } from "@/components/ui/button";
 import Autoplay from "embla-carousel-autoplay";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import Cybersecurity from "@/assets/Home-page-images/ai-cybersecurity-machine-learning-virus.avif";
-import Threat from "@/assets/Home-page-images/data-center.avif";
-import Protection from "@/assets/Home-page-images/data-network-businessman.png";
-import Network from "@/assets/Home-page-images/hackers.avif";
-import Incident from "@/assets/Home-page-images/ai-cybersecurity-virus.avif";
-import IoT from "@/assets/Home-page-images/hand-holding-phone-with-lock-screen.avif";
+import Cybersecurity from "../../assets/Home-page-images/ai-cybersecurity-machine-learning-virus.avif";
+import Threat from "../../assets/Home-page-images/data-center.avif";
+import Protection from "../../assets/Home-page-images/data-network-businessman.png";
+import Network from "../../assets/Home-page-images/hackers.avif";
+import Incident from "../../assets/Home-page-images/ai-cybersecurity-virus.avif";
+import IoT from "../../assets/Home-page-images/hand-holding-phone-with-lock-screen.avif";
 
 const carouselItems = [
   {

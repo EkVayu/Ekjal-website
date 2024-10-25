@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Button } from '@/components/ui/button';
-import hero from '@/assets/Products/hero.png';
+import hero from '../../assets/Products/hero.png';
 
 const heroSectionData = {
   subtitle: "Cybersecurity Solutions",
