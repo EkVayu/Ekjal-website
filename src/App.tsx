@@ -107,7 +107,7 @@ function App() {
           }
         />
         <Route path="*" element={<NotFound />} />
-        <Route path="*" element={<ErrorPage />} />
+        <Route path="/error" element={<ErrorPage />} />
       </Routes>
       <ScrollToTopButton />
     </Router>
