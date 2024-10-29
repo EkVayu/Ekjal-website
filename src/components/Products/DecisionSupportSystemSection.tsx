@@ -16,7 +16,7 @@ const decisionSupportSystemData = {
 
 const DecisionSupportSystemSection = () => {
   return (
-    <section id="decision-support-system" className="w-full">
+    <section id="decision-support-system" className="w-full px-3 lg:px-20">
       <div className="w-full">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-primary mb-12 text-left"

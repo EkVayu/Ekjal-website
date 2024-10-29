@@ -45,7 +45,7 @@ function Header() {
   const location = useLocation();
 
   return (
-    <header className="w-full">
+    <header className="w-full px-3 lg:px-20">
       <Sheet>
         <div className="container flex items-center justify-between py-4">
           <Link to="/" className="flex items-center space-x-2">

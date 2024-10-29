@@ -16,7 +16,7 @@ const secureKnowledgeManagementData = {
 
 const SecureKnowledgeManagementSection = () => {
   return (
-    <section id="secure-knowledge-management" className="w-full">
+    <section id="secure-knowledge-management" className="w-full px-3 lg:px-20">
       <div className="w-full">
         <motion.h2
           className="text-4xl md:text-5xl font-bold mb-12 text-primary text-left"

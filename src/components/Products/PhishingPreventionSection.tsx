@@ -33,7 +33,7 @@ const phishingPreventionData = {
 
 const PhishingPreventionSection = () => {
   return (
-    <section id="phishing-prevention" className="w-full">
+    <section id="phishing-prevention" className="w-full px-3 lg:px-20">
       <div className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -87,7 +87,7 @@ function HeroSection() {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    const offset = 200; // Adjust this value based on your header height
+    const offset = 150; // Adjust this value based on your header height
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
@@ -105,7 +105,7 @@ function HeroSection() {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="flex items-center bg-secondary lg:h-96 pl-2 rounded-md"
+      className="flex items-center lg:h-96 pl-2 rounded-md px-3 lg:px-20"
     >
       <Carousel
         plugins={[

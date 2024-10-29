@@ -15,7 +15,7 @@ const scmSecurityData = {
 
 const SCMSecuritySection = () => {
   return (
-    <section id="SCM-security-automotive" className="relative flex items-center text-white">
+    <section id="SCM-security-automotive" className="relative flex items-center text-white px-3 lg:px-20">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
 
       <div className="container mx-auto px-4">
