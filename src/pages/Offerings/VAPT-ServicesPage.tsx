@@ -1,24 +1,27 @@
 import { motion } from "framer-motion";
 import cyber from "../../assets/Products/cyber.avif";
 import { Link } from "react-router-dom";
+import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import OfferingHeroSection from "./Offering-hero-Section";
+
+const heroData = {
+  backgroundImage: heroImage,
+  title: "VAPT Services",
+  subtitle: "Comprehensive Vulnerability Assessment and Penetration Testing",
+  buttonText: "Learn More",
+  buttonLink: "VAPTServicesPage",
+};
 
 const VAPTServicesPage = () => {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold text-secondary mb-6">
-            VAPT Services
-          </h1>
-          <p className="text-xl text-secondary mb-8">
-            Comprehensive Vulnerability Assessment and Penetration Testing
-          </p>
-        </div>
+      <section className="pb-20">
+        <OfferingHeroSection data={heroData} />
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16">
+      <section id="VAPTServicesPage" className="py-16">
         <div className="w-full px-3 lg:px-20">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">

@@ -1,34 +1,27 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import OfferingHeroSection from "./Offering-hero-Section";
+
+const heroData = {
+  backgroundImage: heroImage,
+  title: "Virtual CISO Services",
+  subtitle:
+    "Enhance your cybersecurity strategy with our expert Virtual CISO services.",
+  buttonText: "Learn More",
+  buttonLink: "VirtualCisoPage",
+};
 
 const VirtualCisoPage = () => {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="container mx-auto px-4">
-          <motion.h1
-            className="text-5xl font-bold mb-6 text-secondary"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Virtual CISO Services
-          </motion.h1>
-          <motion.p
-            className="text-xl text-secondary mb-8"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Enhance your cybersecurity strategy with our expert Virtual CISO
-            services.
-          </motion.p>
-        </div>
+      <section className="pb-20">
+        <OfferingHeroSection data={heroData} />
       </section>
 
       {/* CISO as a Service Section */}
-      <section className="py-16">
+      <section id="VirtualCisoPage" className="py-16">
         <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-bold mb-8 text-center text-primary">
             CISO as a Service

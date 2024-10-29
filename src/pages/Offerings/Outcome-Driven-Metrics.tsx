@@ -1,4 +1,15 @@
 import { Link } from "react-router-dom";
+import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import OfferingHeroSection from "./Offering-hero-Section";
+
+const heroData = {
+  backgroundImage: heroImage,
+  title: "Outcome-Driven Metrics (ODM)",
+  subtitle:
+    "Empowering Cyber Resilience Through Evangelism, Vigilance, and Metrics",
+  buttonText: "Learn More",
+  buttonLink: "OutcomeDrivenMetrics",
+};
 
 const metrics = [
   {
@@ -57,20 +68,12 @@ function OutcomeDrivenMetrics() {
   return (
     <div className="bg-secondary/50 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-secondary py-20">
-        <div className="container mx-auto px-4 text-secondary">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Outcome-Driven Metrics (ODM)
-          </h1>
-          <p className="text-xl mb-8">
-            Empowering Cyber Resilience Through Evangelism, Vigilance, and
-            Metrics
-          </p>
-        </div>
+      <section className="pb-20">
+        <OfferingHeroSection data={heroData} />
       </section>
 
       {/* Metrics Grid */}
-      <section className="py-16">
+      <section id="OutcomeDrivenMetrics" className="py-16">
         <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
             Key Performance Indicators

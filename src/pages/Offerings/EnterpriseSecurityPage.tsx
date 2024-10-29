@@ -12,6 +12,16 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import OfferingHeroSection from "./Offering-hero-Section";
+
+const heroData = {
+  backgroundImage: heroImage,
+  title: "Enterprise Security Solutions",
+  subtitle: "Protecting your business with cutting-edge cybersecurity",
+  buttonText: "Learn More",
+  buttonLink: "EnterpriseSecurityPage",
+};
 
 const EnterpriseSecurityPage = () => {
   const ServiceSection = ({
@@ -90,21 +100,13 @@ const EnterpriseSecurityPage = () => {
 
   return (
     <div className="bg-background text-foreground">
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold text-secondary mb-6">
-            Enterprise Security Solutions
-          </h1>
-          <p className="text-xl text-secondary mb-8">
-            Protecting your business with cutting-edge cybersecurity
-          </p>
-          <button className="bg-secondary text-primary font-semibold py-2 px-6 rounded-lg hover:bg-opacity-90 transition-colors">
-            Learn More
-          </button>
-        </div>
+      <section className="pb-20">
+        <OfferingHeroSection data={heroData} />
       </section>
 
-      <ServiceSection title="Managed Services" items={managedServices} />
+      <div id="EnterpriseSecurityPage">
+        <ServiceSection title="Managed Services" items={managedServices} />
+      </div>
       <ServiceSection
         title="Security Architecture"
         items={securityArchitecture}

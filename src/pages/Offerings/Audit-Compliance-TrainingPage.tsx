@@ -1,6 +1,17 @@
 import { motion } from "framer-motion";
 import cyber from "../../assets/Products/cyber.avif";
 import { Link } from "react-router-dom";
+import OfferingHeroSection from "./Offering-hero-Section";
+import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+
+const heroData = {
+  backgroundImage: heroImage,
+  title: "Audit, Compliance & Training",
+  subtitle:
+    "Empowering your organization with comprehensive security solutions",
+  buttonText: "Learn More",
+  buttonLink: "AuditComplianceTrainingPage",
+};
 
 const AuditComplianceTrainingPage = () => {
   const auditStandards = [
@@ -17,19 +28,12 @@ const AuditComplianceTrainingPage = () => {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold text-secondary mb-6">
-            Audit, Compliance & Training
-          </h1>
-          <p className="text-xl text-secondary mb-8">
-            Empowering your organization with comprehensive security solutions
-          </p>
-        </div>
+      <section className="pb-20">
+        <OfferingHeroSection data={heroData} />
       </section>
 
       {/* Audit Section */}
-      <section className="py-16">
+      <section id="AuditComplianceTrainingPage" className="py-16">
         <div className="w-full px-3 lg:px-20">
           <h2 className="text-4xl font-semibold mb-8 text-primary">
             Security Audits

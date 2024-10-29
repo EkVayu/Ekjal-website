@@ -1,35 +1,28 @@
 import { motion } from "framer-motion";
 import cyber from "../../assets/Products/cyber.avif";
 import { Link } from "react-router-dom";
+import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import OfferingHeroSection from "./Offering-hero-Section";
+
+const heroData = {
+  backgroundImage: heroImage,
+  title: "Automotive Cybersecurity Solutions",
+  subtitle:
+    "Protecting the future of connected and autonomous vehicles in compliance with UNECE 155/UNECE 156 mandate",
+  buttonText: "Learn More",
+  buttonLink: "AutomotiveCyberSecurityPage",
+};
 
 const AutomotiveCyberSecurityPage = () => {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary">
-        <div className="container mx-auto px-4">
-          <motion.h1
-            className="text-5xl font-bold mb-6 text-secondary"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Automotive Cybersecurity Solutions
-          </motion.h1>
-          <motion.p
-            className="text-xl text-white mb-8"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Protecting the future of connected and autonomous vehicles in
-            compliance with UNECE 155/UNECE 156 mandate
-          </motion.p>
-        </div>
+      <section className="pb-20">
+        <OfferingHeroSection data={heroData} />
       </section>
 
       {/* Overview Section */}
-      <section className="py-16">
+      <section id="AutomotiveCyberSecurityPage" className="py-16">
         <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-8 text-primary">
             Automotive Cybersecurity Mandate
