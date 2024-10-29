@@ -227,8 +227,8 @@ const Jobs: React.FC = () => {
   const [selectedJob, setSelectedJob] = useState<JobOpening | null>(null);
 
   return (
-    <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen  py-12 px-3 lg:px-20">
+      <div className="w-full">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}
