@@ -19,7 +19,7 @@ const VAPTServicesPage = () => {
 
       {/* Introduction Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <img
@@ -45,7 +45,7 @@ const VAPTServicesPage = () => {
 
       {/* Coverage Section */}
       <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
             Ekjal VAPT Services Coverage
           </h2>
@@ -74,7 +74,7 @@ const VAPTServicesPage = () => {
 
       {/* Use Cases Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
             VAPT – Use Cases Supported
           </h2>
@@ -105,7 +105,7 @@ const VAPTServicesPage = () => {
 
       {/* Services Section */}
       <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
             Our VAPT Services
           </h2>
@@ -158,7 +158,7 @@ const VAPTServicesPage = () => {
 
       {/* Benefits Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
             Benefits of Our VAPT Services
           </h2>

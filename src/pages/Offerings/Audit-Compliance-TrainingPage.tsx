@@ -30,7 +30,7 @@ const AuditComplianceTrainingPage = () => {
 
       {/* Audit Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-4xl font-semibold mb-8 text-primary">
             Security Audits
           </h2>
@@ -64,7 +64,7 @@ const AuditComplianceTrainingPage = () => {
 
       {/* Compliance Section */}
       <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-4xl font-semibold mb-8 text-primary">
             Compliance Services
           </h2>
@@ -89,7 +89,7 @@ const AuditComplianceTrainingPage = () => {
 
       {/* Training Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-4xl font-semibold mb-8 text-primary">
             Security Training Programs
           </h2>

@@ -71,7 +71,7 @@ function OutcomeDrivenMetrics() {
 
       {/* Metrics Grid */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
             Key Performance Indicators
           </h2>
@@ -91,7 +91,7 @@ function OutcomeDrivenMetrics() {
 
       {/* Strategic Frameworks */}
       <section className="bg-gray-200 py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
             Strategic Frameworks
           </h2>

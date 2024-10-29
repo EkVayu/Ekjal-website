@@ -22,7 +22,7 @@ const EnterpriseSecurityPage = () => {
     items: Array<{ icon: React.ElementType; title: string }>;
   }) => (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-3 lg:px-20">
         <h2 className="text-3xl font-bold mb-12 text-center text-primary">
           {title}
         </h2>

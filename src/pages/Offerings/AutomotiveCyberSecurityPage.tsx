@@ -30,7 +30,7 @@ const AutomotiveCyberSecurityPage = () => {
 
       {/* Overview Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-8 text-primary">
             Automotive Cybersecurity Mandate
           </h2>
@@ -70,7 +70,7 @@ const AutomotiveCyberSecurityPage = () => {
 
       {/* Services Section */}
       <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-semibold mb-12 text-center text-primary">
             Our Automotive Cybersecurity Services
           </h2>

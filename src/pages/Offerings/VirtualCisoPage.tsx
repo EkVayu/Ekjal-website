@@ -29,7 +29,7 @@ const VirtualCisoPage = () => {
 
       {/* CISO as a Service Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-bold mb-8 text-center text-primary">
             CISO as a Service
           </h2>
@@ -58,7 +58,7 @@ const VirtualCisoPage = () => {
 
       {/* CISO Responsibilities Section */}
       <section className="bg-secondary py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-bold mb-8 text-center text-primary">
             CISO Responsibilities
           </h2>
@@ -95,7 +95,7 @@ const VirtualCisoPage = () => {
 
       {/* Service Models Section */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-3 lg:px-20">
           <h2 className="text-3xl font-bold mb-8 text-center text-primary">
             Service Models
           </h2>
