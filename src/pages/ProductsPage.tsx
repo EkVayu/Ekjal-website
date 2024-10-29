@@ -75,7 +75,7 @@ function ProductsPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="py-20 px-4 sm:px-6 lg:px-8">
+      <AnimatedSection className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto">
           <SCMSecuritySection />
         </div>
