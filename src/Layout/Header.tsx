@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ChevronDown, Menu, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-removebg.png";
 import {
   Sheet,
   SheetClose,
