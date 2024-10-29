@@ -94,7 +94,7 @@ function HeroSection() {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="flex items-center bg-secondary"
+      className="flex items-center bg-secondary px-3 lg:px-20 pt-5"
     >
       <Carousel
         plugins={[

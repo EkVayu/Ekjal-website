@@ -50,7 +50,7 @@ const capabilitiesData = [
 
 function OurCybersecurityCapabilities() {
   return (
-    <section className="w-full bg-gradient-to-br from-background to-secondary/20">
+    <section className="w-full bg-gradient-to-br from-background to-secondary/20 px-3 lg:px-20">
       <div className="w-full">
         <h2 className="lg:text-4xl text-xl font-bold text-center mb-12 text-primary">
           Our Cybersecurity Capabilities

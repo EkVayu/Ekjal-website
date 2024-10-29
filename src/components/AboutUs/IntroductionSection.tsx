@@ -28,8 +28,8 @@ const fadeIn = {
 
 const IntroductionSection = () => {
   return (
-    <section className="py-5 container mx-auto">
-      <div className="max-w-full mx-auto">
+    <section className="py-5 px-3 lg:px-20">
+      <div className="w-full">
         <motion.h2
           className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 md:mb-16 text-center text-primary"
           initial="hidden"

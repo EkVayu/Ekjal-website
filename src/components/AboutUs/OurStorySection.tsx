@@ -11,8 +11,8 @@ const ourStoryData = {
 
 const OurStorySection = () => {
   return (
-    <section className="py-5">
-      <div className="container mx-auto px-4">
+    <section className="py-5 px-3 lg:px-20">
+      <div className="w-full">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <img

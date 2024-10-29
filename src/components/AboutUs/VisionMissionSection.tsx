@@ -14,8 +14,8 @@ const visionMissionData = {
 
 const VisionMissionSection = () => {
   return (
-    <section className="py-5">
-      <div className="container mx-auto px-4">
+    <section className="py-5 px-3 lg:px-20">
+      <div className="w-full">
         <h2 className="text-4xl font-bold mb-12 text-center text-primary">
           {visionMissionData.title}
         </h2>
