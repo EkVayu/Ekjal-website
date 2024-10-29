@@ -14,7 +14,7 @@ const scmSecurityData = {
 
 const SCMSecuritySection = () => {
   return (
-    <section className="rounded-md">
+    <section id="SCM-security-automotive" className="rounded-md">
       <h2 className="lg:text-3xl text-xl font-semibold mb-6 text-center lg:text-start">
         {scmSecurityData.title}
       </h2>

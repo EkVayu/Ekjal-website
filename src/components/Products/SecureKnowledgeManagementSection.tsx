@@ -15,7 +15,7 @@ const secureKnowledgeManagementData = {
 
 const SecureKnowledgeManagementSection = () => {
   return (
-    <section className="rounded-md ">
+    <section id="secure-knowledge-management" className="rounded-md ">
       <h2 className="lg:text-3xl text-xl font-semibold mb-6 text-center lg:text-start">
         {secureKnowledgeManagementData.title}
       </h2>

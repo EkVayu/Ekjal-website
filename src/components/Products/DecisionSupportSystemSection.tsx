@@ -15,7 +15,7 @@ const decisionSupportSystemData = {
 
 const DecisionSupportSystemSection = () => {
   return (
-    <section className="rounded-md">
+    <section id="decision-support-system" className="rounded-md">
       <h2 className="lg:text-3xl text-xl font-semibold mb-6 text-center lg:text-start">
         {decisionSupportSystemData.title}
       </h2>

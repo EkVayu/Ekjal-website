@@ -14,7 +14,7 @@ const phishingPreventionData = {
 
 const PhishingPreventionSection = () => {
   return (
-    <section className="rounded-md overflow-hidden">
+    <section id="phishing-prevention" className="rounded-md overflow-hidden">
       <h2 className="lg:text-3xl text-xl font-semibold mb-6 text-center lg:text-start">
         {phishingPreventionData.title}
       </h2>

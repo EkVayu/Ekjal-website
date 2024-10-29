@@ -14,7 +14,7 @@ const predictiveMaintenanceData = {
 
 const PredictiveMaintenanceSection = () => {
   return (
-    <section className="rounded-md ">
+    <section id="predictive-maintenance" className="rounded-md ">
       <h2 className="lg:text-3xl text-xl font-semibold mb-6 text-center lg:text-start">
         {predictiveMaintenanceData.title}
       </h2>
