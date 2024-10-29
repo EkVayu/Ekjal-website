@@ -68,7 +68,7 @@ function OutcomeDrivenMetrics() {
   return (
     <div className="bg-secondary/50 min-h-screen">
       {/* Hero Section */}
-      <section className="pb-20">
+      <section className="w-full">
         <OfferingHeroSection data={heroData} />
       </section>
 

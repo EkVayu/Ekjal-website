@@ -31,22 +31,34 @@ const EnterpriseSecurityPage = () => {
     title: string;
     items: Array<{ icon: React.ElementType; title: string }>;
   }) => (
-    <section className="py-16">
-      <div className="w-full px-3 lg:px-20">
-        <h2 className="text-3xl font-bold mb-12 text-center text-primary">
+    <section className="py-20 bg-gradient-to-b from-background to-secondary/10">
+      <div className="w-full px-4 lg:px-20">
+        <motion.h2
+          className="text-4xl font-bold mb-16 text-center text-primary"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           {title}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {items.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-card p-6 rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
+              className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-primary/10"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <item.icon className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="p-3 bg-primary/10 rounded-xl">
+                  <item.icon className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground/90">
+                  {item.title}
+                </h3>
+              </div>
+              <div className="h-1 w-20 bg-gradient-to-r from-primary to-primary/50 rounded-full" />
             </motion.div>
           ))}
         </div>
@@ -98,39 +110,49 @@ const EnterpriseSecurityPage = () => {
     { icon: Zap, title: "Supporting PDCA activities" },
   ];
 
+  const CallToAction = () => (
+    <motion.section
+      className="py-24 bg-gradient-to-r from-primary to-primary/80 text-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-4xl font-bold mb-8">
+          Ready to Secure Your Enterprise?
+        </h2>
+        <p className="text-xl mb-10 max-w-2xl mx-auto">
+          Contact us today for a comprehensive security assessment and
+          personalized solutions
+        </p>
+        <Link to="/contact-us">
+          <motion.button
+            className="bg-white text-primary font-semibold py-4 px-10 rounded-full hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get Started
+          </motion.button>
+        </Link>
+      </div>
+    </motion.section>
+  );
+
   return (
     <div className="bg-background text-foreground">
-      <section className="pb-20">
-        <OfferingHeroSection data={heroData} />
-      </section>
-
+      <OfferingHeroSection data={heroData} />
       <div id="EnterpriseSecurityPage">
         <ServiceSection title="Managed Services" items={managedServices} />
+        <ServiceSection
+          title="Security Architecture"
+          items={securityArchitecture}
+        />
+        <ServiceSection
+          title="Enterprise Security Advisory"
+          items={enterpriseSecurityAdvisory}
+        />
       </div>
-      <ServiceSection
-        title="Security Architecture"
-        items={securityArchitecture}
-      />
-      <ServiceSection
-        title="Enterprise Security Advisory"
-        items={enterpriseSecurityAdvisory}
-      />
-
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Ready to Secure Your Enterprise?
-          </h2>
-          <p className="text-xl mb-8">
-            Contact us today for a free consultation and security assessment
-          </p>
-          <Link to={"/contact-us"}>
-            <button className="bg-white text-primary font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors">
-              Get Started
-            </button>
-          </Link>
-        </div>
-      </section>
+      <CallToAction />
     </div>
   );
 };

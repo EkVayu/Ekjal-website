@@ -28,7 +28,7 @@ const AuditComplianceTrainingPage = () => {
   return (
     <div className="bg-background text-foreground">
       {/* Hero Section */}
-      <section className="pb-20">
+      <section className="w-full">
         <OfferingHeroSection data={heroData} />
       </section>
 
