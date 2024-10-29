@@ -1,6 +1,15 @@
 import { motion } from "framer-motion";
+import {
+  Shield,
+  Server,
+  Globe,
+  Smartphone,
+  Cloud,
+  Cpu,
+  Lock,
+  CheckCircle,
+} from "lucide-react";
 import cyber from "../../assets/Products/cyber.avif";
-import { Link } from "react-router-dom";
 import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
 import OfferingHeroSection from "./Offering-hero-Section";
 
@@ -9,33 +18,37 @@ const heroData = {
   title: "VAPT Services",
   subtitle: "Comprehensive Vulnerability Assessment and Penetration Testing",
   buttonText: "Learn More",
-  buttonLink: "VAPTServicesPage",
+  buttonLink: "OutcomeDrivenMetrics",
 };
 
 const VAPTServicesPage = () => {
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background overflow-hidden">
       {/* Hero Section */}
       <section className="w-full">
         <OfferingHeroSection data={heroData} />
       </section>
 
-      {/* Introduction Section */}
-      <section id="VAPTServicesPage" className="py-16">
-        <div className="w-full px-3 lg:px-20">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0">
+      {/* What is VAPT Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <motion.div
+              className="md:w-1/2"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+            >
               <img
                 src={cyber}
-                alt="VAPT Services"
-                className="rounded-lg shadow-lg"
+                alt="VAPT Illustration"
+                className="rounded-2xl shadow-2xl"
               />
-            </div>
-            <div className="md:w-1/2 md:pl-12">
-              <h2 className="text-3xl font-semibold mb-4 text-primary">
+            </motion.div>
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-bold text-primary mb-6">
                 What is VAPT?
               </h2>
-              <p className="text-lg mb-4">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 Vulnerability Assessment and Penetration Testing (VAPT) is a
                 comprehensive security testing approach that identifies,
                 analyzes, and helps mitigate security vulnerabilities in your
@@ -46,40 +59,50 @@ const VAPTServicesPage = () => {
         </div>
       </section>
 
-      {/* Coverage Section */}
-      <section className="py-16 bg-muted">
-        <div className="w-full px-3 lg:px-20">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
-            Ekjal VAPT Services Coverage
-          </h2>
-          <p className="text-lg text-center mb-8">
-            We carry out VAPT services for securing:
-          </p>
+      {/* Services Coverage */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <h2 className="text-4xl font-bold text-primary mb-6">
+              VAPT Services Coverage
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              We carry out VAPT services for securing:
+            </p>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              "Web-based Infrastructure and Applications",
-              "Cloud-based Applications",
-              "Mobile Applications",
+              { icon: <Globe />, title: "Web-based Infrastructure" },
+              { icon: <Cloud />, title: "Cloud-based Applications" },
+              { icon: <Smartphone />, title: "Mobile Applications" },
             ].map((item, index) => (
               <motion.div
                 key={index}
+                className="bg-card p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center group hover:bg-primary hover:text-white"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card p-6 rounded-lg shadow-md text-center"
               >
-                <h3 className="text-xl font-semibold mb-2">{item}</h3>
+                <div className="text-primary group-hover:text-white mb-6">
+                  {item.icon}
+                </div>
+                <h3 className="text-2xl font-semibold">{item.title}</h3>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-16">
-        <div className="w-full px-3 lg:px-20">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
-            VAPT – Use Cases Supported
+      {/* Use Cases Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-primary text-center mb-16">
+            Use Cases Supported
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -94,10 +117,10 @@ const VAPTServicesPage = () => {
             ].map((useCase, index) => (
               <motion.div
                 key={index}
+                className="bg-primary/20 hover:bg-primary hover:text-white p-6 rounded-xl text-center transition-all duration-300"
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-primary text-primary-foreground p-4 rounded-lg shadow-md text-center"
               >
                 <p className="font-semibold">{useCase}</p>
               </motion.div>
@@ -106,39 +129,45 @@ const VAPTServicesPage = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16 bg-muted">
-        <div className="w-full px-3 lg:px-20">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
+      {/* VAPT Services */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-primary text-center mb-16">
             Our VAPT Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                icon: <Server />,
                 title: "Network VAPT",
                 description:
                   "Comprehensive assessment of network infrastructure",
               },
               {
+                icon: <Globe />,
                 title: "Web Application VAPT",
                 description:
                   "In-depth testing of web applications for vulnerabilities",
               },
               {
+                icon: <Smartphone />,
                 title: "Mobile App VAPT",
                 description:
                   "Security assessment for iOS and Android applications",
               },
               {
+                icon: <Cloud />,
                 title: "Cloud VAPT",
                 description:
                   "Vulnerability assessment for cloud-based infrastructure",
               },
               {
+                icon: <Cpu />,
                 title: "IoT VAPT",
                 description: "Security testing for Internet of Things devices",
               },
               {
+                icon: <Lock />,
                 title: "API VAPT",
                 description:
                   "Thorough testing of API endpoints and integrations",
@@ -146,12 +175,15 @@ const VAPTServicesPage = () => {
             ].map((service, index) => (
               <motion.div
                 key={index}
+                className="bg-card p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border group hover:border-primary"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card p-6 rounded-lg shadow-md"
               >
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <div className="text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
               </motion.div>
             ))}
@@ -160,75 +192,52 @@ const VAPTServicesPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16">
-        <div className="w-full px-3 lg:px-20">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-primary text-center mb-16">
             Benefits of Our VAPT Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex items-start">
-              <svg
-                className="w-6 h-6 text-primary mr-4 mt-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
+            <motion.div
+              className="flex items-start gap-6 p-8 bg-card rounded-xl shadow-lg"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+            >
+              <Shield className="text-primary w-12 h-12 flex-shrink-0" />
               <div>
-                <h3 className="text-xl font-semibold mb-2">
-                  Proactive Security
-                </h3>
+                <h3 className="text-2xl font-bold mb-4">Proactive Security</h3>
                 <p className="text-muted-foreground">
                   Identify and address vulnerabilities before they can be
                   exploited
                 </p>
               </div>
-            </div>
-            <div className="flex items-start">
-              <svg
-                className="w-6 h-6 text-primary mr-4 mt-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                />
-              </svg>
+            </motion.div>
+            <motion.div
+              className="flex items-start gap-6 p-8 bg-card rounded-xl shadow-lg"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+            >
+              <CheckCircle className="text-primary w-12 h-12 flex-shrink-0" />
               <div>
-                <h3 className="text-xl font-semibold mb-2">Compliance</h3>
+                <h3 className="text-2xl font-bold mb-4">Compliance</h3>
                 <p className="text-muted-foreground">
                   Meet regulatory requirements and industry standards
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-semibold mb-4 text-secondary">
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/80">
+        <div className="container mx-auto px-4 text-center text-white">
+          <h2 className="text-4xl font-bold mb-8">
             Ready to Secure Your Systems?
           </h2>
-          <p className="text-xl mb-8 text-secondary">
-            Contact us today for a comprehensive VAPT assessment
-          </p>
-          <Link to={"/contact-us"}>
-            <button className="bg-white text-primary font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors">
-              Get Started
-            </button>
-          </Link>
+          <button className="bg-white text-primary font-bold py-4 px-8 rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl">
+            Get Started Now
+          </button>
         </div>
       </section>
     </div>
