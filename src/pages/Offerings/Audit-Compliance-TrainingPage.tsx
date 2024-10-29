@@ -27,61 +27,94 @@ const AuditComplianceTrainingPage = () => {
 
   return (
     <div className="bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="w-full">
-        <OfferingHeroSection data={heroData} />
-      </section>
+      <OfferingHeroSection data={heroData} />
 
-      {/* Audit Section */}
-      <section id="AuditComplianceTrainingPage" className="py-16">
+      {/* Audit Section with Enhanced Design */}
+      <section id="AuditComplianceTrainingPage" className="py-24">
         <div className="w-full px-3 lg:px-20">
-          <h2 className="text-4xl font-semibold mb-8 text-primary">
+          <motion.h2
+            className="text-5xl font-bold mb-12 text-primary text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             Security Audits
-          </h2>
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0">
+          </motion.h2>
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <motion.div
+              className="md:w-1/2"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <img
                 src={cyber}
                 alt="Security Audit"
-                className="rounded-lg shadow-lg"
+                className="rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
               />
-            </div>
-            <div className="md:w-1/2 md:pl-12">
-              <h3 className="text-2xl font-semibold mb-4">
+            </motion.div>
+            <motion.div
+              className="md:w-1/2 space-y-6"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-3xl font-bold text-primary">
                 Comprehensive Assessments
               </h3>
-              <p className="text-lg mb-4">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 Our expert team conducts thorough security audits to identify
                 vulnerabilities and assess your organization's overall security
                 posture.
               </p>
-              <ul className="list-disc list-inside text-lg">
-                <li>Network Security Audits</li>
-                <li>Application Security Assessments</li>
-                <li>Cloud Security Audits</li>
-                <li>IoT Security Evaluations</li>
+              <ul className="space-y-4">
+                {[
+                  "Network Security Audits",
+                  "Application Security Assessments",
+                  "Cloud Security Audits",
+                  "IoT Security Evaluations",
+                ].map((item, index) => (
+                  <motion.li
+                    key={index}
+                    className="flex items-center space-x-3 text-lg"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    <div className="h-2 w-2 bg-primary rounded-full" />
+                    <span>{item}</span>
+                  </motion.li>
+                ))}
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Compliance Section */}
-      <section className="py-16 bg-muted">
+      {/* Compliance Section with Glass Effect */}
+      <section className="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="w-full px-3 lg:px-20">
-          <h2 className="text-4xl font-semibold mb-8 text-primary">
+          <motion.h2
+            className="text-5xl font-bold mb-16 text-primary text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             Compliance Services
-          </h2>
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {auditStandards.map((standard, index) => (
               <motion.div
                 key={index}
-                className="bg-card p-6 rounded-lg shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
+                className="backdrop-blur-md bg-white/30 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
               >
-                <h3 className="text-2xl font-semibold mb-4">{standard}</h3>
-                <p className="text-lg">
+                <h3 className="text-2xl font-bold mb-4 text-primary">
+                  {standard}
+                </h3>
+                <p className="text-lg text-muted-foreground">
                   Ensure your organization meets the stringent requirements of{" "}
                   {standard}.
                 </p>
@@ -91,53 +124,32 @@ const AuditComplianceTrainingPage = () => {
         </div>
       </section>
 
-      {/* Training Section */}
-      <section className="py-16">
-        <div className="w-full px-3 lg:px-20">
-          <h2 className="text-4xl font-semibold mb-8 text-primary">
-            Security Training Programs
-          </h2>
-          <div className="flex flex-col md:flex-row-reverse items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0 md:pl-12">
-              <img
-                src={cyber}
-                alt="Security Training"
-                className="rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="md:w-1/2">
-              <h3 className="text-2xl font-semibold mb-4">Empower Your Team</h3>
-              <p className="text-lg mb-4">
-                Our tailored training programs equip your staff with the
-                knowledge and skills to maintain a robust security posture.
-              </p>
-              <ul className="list-disc list-inside text-lg">
-                <li>Cybersecurity Awareness Training</li>
-                <li>Phishing Simulation Exercises</li>
-                <li>Incident Response Workshops</li>
-                <li>Secure Coding Practices</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+      {/* Enhanced CTA Section */}
+      <section className="py-24 bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary"></div>
+        <motion.div
+          className="container mx-auto px-4 text-center relative z-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-5xl font-bold mb-8 text-white">
             Ready to Enhance Your Security?
           </h2>
-          <p className="text-xl mb-8">
+          <p className="text-2xl mb-12 text-white/90 max-w-2xl mx-auto">
             Contact us today to learn more about our audit, compliance, and
             training services.
           </p>
-          <Link to={"/contact-us"}>
-            <button className="bg-white text-primary font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors">
+          <Link to="/contact-us">
+            <motion.button
+              className="bg-white text-primary font-bold py-4 px-12 rounded-full text-lg hover:bg-opacity-90 transition-all duration-300 hover:shadow-2xl"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Get Started
-            </button>
+            </motion.button>
           </Link>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
