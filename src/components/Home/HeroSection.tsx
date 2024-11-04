@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import Autoplay from "embla-carousel-autoplay";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+
 import Cybersecurity from "../../assets/Home-page-images/ai-cybersecurity-machine-learning-virus.avif";
 import Threat from "../../assets/Home-page-images/data-center.avif";
 import Protection from "../../assets/Home-page-images/data-network-businessman.png";
@@ -93,12 +94,12 @@ function HeroSection() {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="flex items-center bg-secondary"
+      className="flex items-center bg-secondary px-3 lg:px-20 pt-5"
     >
       <Carousel
         plugins={[
           Autoplay({
-            delay: 3000,
+            delay: 5000,
           }),
         ]}
         className="w-full bg-transparent"

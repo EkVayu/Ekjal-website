@@ -44,37 +44,37 @@ const AboutUsPage = () => {
       <HeroSection />
       
       <AnimatedSection>
-        <div className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="py-16">
           <IntroductionSection />
         </div>
       </AnimatedSection>
       
       <AnimatedSection>
-        <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="bg-gray-100 py-16">
           <OurStorySection />
         </div>
       </AnimatedSection>
       
       <AnimatedSection>
-        <div className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="py-16">
           <AnimatedCardsSection />
         </div>
       </AnimatedSection>
       
       <AnimatedSection>
-        <div className="bg-blue-50 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="bg-blue-50 py-16">
           <VisionMissionSection />
         </div>
       </AnimatedSection>
       
       <AnimatedSection>
-        <div className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="py-16">
           <ClientsSection />
         </div>
       </AnimatedSection>
       
       <AnimatedSection>
-        <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="bg-gray-100 py-16">
           <OurTeamsSection />
         </div>
       </AnimatedSection>

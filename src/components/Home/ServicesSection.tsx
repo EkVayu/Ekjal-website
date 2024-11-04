@@ -126,7 +126,7 @@ function ServicesSection() {
     },
   };
   return (
-    <section className="bg-background lg:py-16 py-5">
+    <section className="bg-background lg:py-16 py-5 px-3 lg:px-20">
       <div className="container mx-auto">
         <h2 className="lg:text-4xl text-xl font-bold text-center mb-12 text-primary">
           Our Services

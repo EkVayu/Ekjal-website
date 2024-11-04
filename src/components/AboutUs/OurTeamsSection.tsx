@@ -38,8 +38,8 @@ const teamData = {
 
 const OurTeamsSection: React.FC = () => {
   return (
-    <section className="">
-      <div className="">
+    <section className="px-3 lg:px-20">
+      <div className="w-full">
         <motion.h2
           className="text-5xl font-bold mb-16 text-primary text-center"
           initial={{ opacity: 0, y: -20 }}

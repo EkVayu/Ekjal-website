@@ -1,12 +1,7 @@
-import Jobs from '@/components/Jobs/Jobs'
-
+import Jobs from "@/components/Jobs/Jobs";
 
 const JobsPage = () => {
-  return (
-    <div>
-      <Jobs />
-    </div>
-  )
-}
+  return <Jobs />;
+};
 
-export default JobsPage
+export default JobsPage;

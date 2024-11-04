@@ -49,7 +49,7 @@ const socialIcons = [
 function Footer() {
   return (
     <footer>
-      <div className="pb-16">
+      <div className="pb-16 px-3 lg:px-20">
         <div className="w-full">
           <div className="grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
             <div className="col-span-full lg:col-span-2">

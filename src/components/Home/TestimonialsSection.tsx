@@ -67,7 +67,7 @@ function TestimonialsSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: 0.5 }}
-      className="lg:py-16 py-5"
+      className="lg:py-16 py-5 px-3 lg:px-20"
     >
       <div className="w-full">
         <h2 className="lg:text-4xl text-xl font-bold text-center mb-12 text-primary">

@@ -1,17 +1,64 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Button } from '@/components/ui/button';
-import hero from '../../assets/Products/hero.png';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import Cybersecurity from "../../assets/Home-page-images/ai-cybersecurity-machine-learning-virus.avif";
+import Threat from "../../assets/Home-page-images/data-center.avif";
+import Protection from "../../assets/Home-page-images/data-network-businessman.png";
+import Network from "../../assets/Home-page-images/hackers.avif";
+import Incident from "../../assets/Home-page-images/ai-cybersecurity-virus.avif";
 
-const heroSectionData = {
-  subtitle: "Cybersecurity Solutions",
-  title: "Phishing Prevention Tool",
-  description: "Our state-of-the-art Phishing Prevention Tool uses AI-based analytics to detect and actively prevent phishing attacks. Protect your enterprise from social engineering threats and data loss with our advanced solution.",
-  buttonText: "Learn More",
-  image: hero
-};
+const carouselItems = [
+  {
+    subHeading: "Welcome to",
+    heading: "Phishing Prevention Tool",
+    paragraph:
+      "Our advanced Phishing Prevention Tool employs cutting-edge AI and machine learning algorithms to protect your organization from sophisticated phishing attacks. We provide real-time threat detection, email filtering, and user awareness training to create a robust defense against social engineering attempts. With automated scanning, suspicious link detection, and detailed reporting, our solution ensures your team stays protected from evolving phishing threats.",
+    image: Cybersecurity,
+    sectionId: "phishing-prevention",
+  },
+  {
+    subHeading: "Threat Detection",
+    heading: "Secure Knowledge Management",
+    paragraph:
+      "Transform your organization's knowledge sharing with our Secure Knowledge Management system. We provide end-to-end encryption, granular access controls, and secure collaboration tools to protect your intellectual property. Our platform enables safe document sharing, version control, and audit trails while ensuring compliance with data protection regulations. Experience seamless knowledge transfer without compromising security.",
+    image: Threat,
+    sectionId: "secure-knowledge-management",
+  },
+  {
+    subHeading: "Data Protection",
+    heading: "Decision Support System",
+    paragraph:
+      "Empower your decision-making process with our intelligent Decision Support System. Leveraging advanced analytics and secure data processing, our platform provides real-time insights while maintaining data integrity. From risk assessment to resource allocation, our system helps you make informed decisions based on protected, accurate data, ensuring both security and operational efficiency.",
+    image: Protection,
+    sectionId: "decision-support-system",
+  },
+  {
+    subHeading: "Network Security",
+    heading: "SCM Security - Automotive",
+    paragraph:
+      "Secure your automotive supply chain with our specialized SCM Security solution. We offer comprehensive protection for your entire supply chain network, from component tracking to delivery verification. Our system includes secure vendor management, real-time monitoring, and blockchain integration to ensure transparency and security across your automotive supply chain operations.",
+    image: Network,
+    sectionId: "SCM-security-automotive",
+  },
+  {
+    subHeading: "Incident Response",
+    heading: "Predictive Maintenance for Machines",
+    paragraph:
+      "Optimize your machine performance with our AI-powered Predictive Maintenance system. Using secure IoT sensors and advanced analytics, we help prevent equipment failures before they occur. Our solution monitors machine health, predicts maintenance needs, and provides actionable insights while maintaining robust security protocols to protect your operational data.",
+    image: Incident,
+    sectionId: "predictive-maintenance",
+  },
+];
 
-const HeroSection = () => {
+function HeroSection() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -38,46 +85,88 @@ const HeroSection = () => {
     },
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    const offset = 150; // Adjust this value based on your header height
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <motion.div
       ref={ref}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="flex items-center bg-gradient-to-b lg:bg-gradient-to-r from-primary to-secondary p-2 lg:py-20 lg:h-[70vh] rounded-md"
+      className="flex items-center lg:h-96 pl-2 rounded-md px-3 lg:px-20"
     >
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center">
-          <motion.div variants={itemVariants} className="w-full md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0">
-            <motion.h3 variants={itemVariants} className="text-xl font-semibold text-secondary mb-3">
-              {heroSectionData.subtitle}
-            </motion.h3>
-            <motion.h2 variants={itemVariants} className="lg:text-5xl text-2xl font-bold mb-6 leading-tight text-secondary">
-              {heroSectionData.title}
-            </motion.h2>
-            <motion.p variants={itemVariants} className="lg:text-lg text-sm text-secondary mb-8 leading-relaxed">
-              {heroSectionData.description}
-            </motion.p>
-            <motion.div variants={itemVariants}>
-              <Button
-                size="lg"
-                className="bg-white text-blue-600 hover:bg-blue-100 transition-colors duration-300 text-lg px-8 py-3 rounded-md shadow-lg hover:shadow-xl"
+      <Carousel
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
+        className="w-full bg-transparent"
+      >
+        <CarouselContent className="bg-transparent">
+          {carouselItems.map((item, index) => (
+            <CarouselItem
+              key={index}
+              className="flex flex-col md:flex-row items-center bg-transparent"
+            >
+              <motion.div
+                variants={itemVariants}
+                className="w-full md:w-1/2 pr-0 md:pr-12 mb-8 md:mb-0"
               >
-                {heroSectionData.buttonText}
-              </Button>
-            </motion.div>
-          </motion.div>
-          <motion.div variants={itemVariants} className="w-full md:w-1/2 h-[400px] md:h-[480px] relative rounded-md overflow-hidden">
-            <img
-              src={heroSectionData.image}
-              alt={heroSectionData.title}
-              className="rounded-md w-full h-full object-contain object-center"
-            />
-          </motion.div>
+                <motion.h2
+                  variants={itemVariants}
+                  className="lg:text-4xl text-2xl md:text-6xl font-bold text-primary mb-6 leading-tight"
+                >
+                  {item.heading}
+                </motion.h2>
+                <motion.p
+                  variants={itemVariants}
+                  className="lg:text-lg text-sm text-muted-foreground mb-8 leading-relaxed"
+                >
+                  {item.paragraph}
+                </motion.p>
+                <motion.div variants={itemVariants}>
+                  <Button
+                    size="lg"
+                    onClick={() => scrollToSection(item.sectionId)}
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 text-lg px-8 py-3 rounded-md shadow-lg hover:shadow-xl"
+                  >
+                    Learn More
+                  </Button>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                variants={itemVariants}
+                className="w-full md:w-1/2 h-60 lg:h-96 relative rounded-md overflow-hidden"
+              >
+                <img
+                  src={item.image}
+                  alt="Hero"
+                  className="rounded-md w-full h-full object-cover"
+                />
+              </motion.div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <div className="absolute right-16 bottom-8 flex space-x-4">
+          <CarouselPrevious className="w-10 h-10 rounded-full bg-white/90 shadow-lg text-foreground hover:bg-primary hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center" />
+          <CarouselNext className="w-10 h-10 rounded-full bg-white/90 shadow-lg text-foreground hover:bg-primary hover:text-white transition-all duration-300 ease-in-out flex items-center justify-center" />
         </div>
-      </div>
+      </Carousel>
     </motion.div>
   );
-};
+}
 
 export default HeroSection;

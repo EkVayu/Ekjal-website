@@ -48,12 +48,12 @@ const Card = ({ title, content, index }: { title: string; content: string; index
 const AnimatedCardsSection = () => {
   return (
     <motion.section 
-      className="py-20"
+      className="py-20  px-3 lg:px-20"
       initial="hidden"
       animate="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="container mx-auto px-4">
+      <div className="w-full">
         <motion.h2 
           className="text-4xl font-bold mb-12 text-center text-primary"
           initial={{ opacity: 0, y: -20 }}

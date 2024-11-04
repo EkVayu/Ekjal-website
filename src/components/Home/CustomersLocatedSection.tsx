@@ -92,7 +92,7 @@ function CustomersLocatedSection() {
     <motion.div
       ref={sectionRef}
       style={{ opacity, scale }}
-      className="text-foreground lg:py-16 py-5"
+      className="text-foreground lg:py-16 py-5 px-3 lg:px-20"
     >
       <motion.h2
         initial={{ y: 50, opacity: 0 }}

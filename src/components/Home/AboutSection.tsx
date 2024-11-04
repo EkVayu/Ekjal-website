@@ -46,7 +46,7 @@ function AboutSection() {
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="flex items-center justify-center  lg:py-16 py-5"
+      className="flex items-center justify-center  lg:py-16 py-5 px-3 lg:px-20"
     >
       <div className="w-full flex flex-col md:flex-row items-center md:gap-20 gap-5">
         <div className="w-full h-[500px] flex justify-center rounded-md overflow-hidden">

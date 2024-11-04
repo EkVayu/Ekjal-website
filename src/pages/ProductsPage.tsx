@@ -42,7 +42,7 @@ const AnimatedSection = ({ children, className }: { children: React.ReactNode, c
 
 function ProductsPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white pt-5">
       <HeroSection />
 
       <AnimatedSection className="py-16 px-4 sm:px-6 lg:px-8">
@@ -75,13 +75,13 @@ function ProductsPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="py-20 px-4 sm:px-6 lg:px-8">
+      <AnimatedSection className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto">
           <SCMSecuritySection />
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="bg-gradient-to-r from-green-100 to-teal-100 py-20 px-4 sm:px-6 lg:px-8">
+      <AnimatedSection className="bg-gradient-to-r from-blue-100 to-indigo-100 py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <PredictiveMaintenanceSection />
         </div>

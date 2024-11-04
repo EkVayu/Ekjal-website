@@ -1,4 +1,16 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import OfferingHeroSection from "./Offering-hero-Section";
+
+const heroData = {
+  backgroundImage: heroImage,
+  title: "Outcome-Driven Metrics (ODM)",
+  subtitle:
+    "Empowering Cyber Resilience Through Evangelism, Vigilance, and Metrics",
+  buttonText: "Learn More",
+  buttonLink: "OutcomeDrivenMetrics",
+};
 
 const metrics = [
   {
@@ -55,109 +67,137 @@ const metrics = [
 
 function OutcomeDrivenMetrics() {
   return (
-    <div className="bg-secondary/50 min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-secondary py-20">
-        <div className="container mx-auto px-4 text-secondary">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Outcome-Driven Metrics (ODM)
-          </h1>
-          <p className="text-xl mb-8">
-            Empowering Cyber Resilience Through Evangelism, Vigilance, and
-            Metrics
-          </p>
-        </div>
+    <div className="bg-gradient-to-b from-secondary/50 to-secondary/30 min-h-screen">
+      <section className="w-full">
+        <OfferingHeroSection data={heroData} />
       </section>
 
-      {/* Metrics Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
+      {/* Metrics Grid with Animation */}
+      <section id="OutcomeDrivenMetrics" className="py-20">
+        <div className="w-full px-3 lg:px-20">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-bold mb-12 text-center text-primary"
+          >
             Key Performance Indicators
-          </h2>
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {metrics.map((metric, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-secondary rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-primary/10"
               >
-                <h3 className="text-xl font-semibold mb-2">{metric.title}</h3>
-                <p className="text-foreground/80">{metric.description}</p>
-              </div>
+                <div className="flex flex-col h-full">
+                  <h3 className="text-2xl font-bold mb-4 text-primary">
+                    {metric.title}
+                  </h3>
+                  <p className="text-foreground/80 text-lg leading-relaxed">
+                    {metric.description}
+                  </p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Strategic Frameworks */}
-      <section className="bg-gray-200 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-primary">
+      {/* Strategic Frameworks with Glass Effect */}
+      <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-200">
+        <div className="w-full px-3 lg:px-20">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-bold mb-12 text-center text-primary"
+          >
             Strategic Frameworks
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-2xl font-semibold mb-4">WAVE Framework</h3>
-              <ul className="list-disc list-inside">
-                <li>
-                  <strong className="text-primary">W</strong>isdom: Empowering
-                  employees with knowledge
-                </li>
-                <li>
-                  <strong className="text-primary">A</strong>wareness:
-                  Cultivating a vigilant mindset
-                </li>
-                <li>
-                  <strong className="text-primary">V</strong>igilance:
-                  Encouraging continuous monitoring
-                </li>
-                <li>
-                  <strong className="text-primary">E</strong>ngagement:
-                  Fostering collaboration
-                </li>
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl p-8 border border-primary/10"
+            >
+              <h3 className="text-3xl font-bold mb-6 text-primary">
+                WAVE Framework
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Wisdom: Empowering employees with knowledge",
+                  "Awareness: Cultivating a vigilant mindset",
+                  "Vigilance: Encouraging continuous monitoring",
+                  "Engagement: Fostering collaboration",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center space-x-3 text-lg"
+                  >
+                    <span className="text-primary font-bold">{item[0]}</span>
+                    <span className="text-foreground/80">{item}</span>
+                  </li>
+                ))}
               </ul>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-2xl font-semibold mb-4">FLOW Framework</h3>
-              <ul className="list-disc list-inside">
-                <li>
-                  <strong className="text-primary">F</strong>ocus: Prioritizing
-                  effective security measures
-                </li>
-                <li>
-                  <strong className="text-primary">L</strong>earning: Promoting
-                  continuous education
-                </li>
-                <li>
-                  <strong className="text-primary">O</strong>bservation: Keenly
-                  monitoring systems
-                </li>
-                <li>
-                  <strong className="text-primary">W</strong>ell-being: Ensuring
-                  a safe digital environment
-                </li>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl p-8 border border-primary/10"
+            >
+              <h3 className="text-3xl font-bold mb-6 text-primary">
+                FLOW Framework
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Focus: Prioritizing effective security measures",
+                  "Learning: Promoting continuous education",
+                  "Observation: Keenly monitoring systems",
+                  "Well-being: Ensuring a safe digital environment",
+                ].map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center space-x-3 text-lg"
+                  >
+                    <span className="text-primary font-bold">{item[0]}</span>
+                    <span className="text-foreground/80">
+                      {item}
+                    </span>
+                  </li>
+                ))}
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-primary text-primary-foreground py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">
+      {/* Enhanced CTA Section */}
+      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="container mx-auto px-4 text-center"
+        >
+          <h2 className="text-4xl font-bold mb-6">
             Ready to Enhance Your Cybersecurity Metrics?
           </h2>
-          <p className="text-xl mb-8">
+          <p className="text-xl mb-10 max-w-2xl mx-auto">
             Contact us today to learn how our Outcome-Driven Metrics can
             transform your security posture.
           </p>
-          <Link to={"/contact-us"}>
-            <button className="bg-white text-primary font-semibold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-colors">
+          <Link to="/contact-us">
+            <button className="bg-white text-primary font-bold py-4 px-10 rounded-full hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get Started
             </button>
           </Link>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
