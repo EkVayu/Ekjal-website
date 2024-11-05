@@ -33,7 +33,17 @@ const scrollToSection = (sectionId: string) => {
   }
 };
 
-const OfferingHeroSection = ({ data }: any) => {
+const OfferingHeroSection = ({
+  data,
+}: {
+  data: {
+    backgroundImage: string;
+    title: string;
+    subtitle: string;
+    buttonLink: string;
+    buttonText: string;
+  };
+}) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
