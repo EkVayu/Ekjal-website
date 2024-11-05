@@ -33,14 +33,15 @@ const navItems = [
 ];
 
 const offeringItems = [
+  { name: "Phishing Prevention Tool", link: "/phishing-prevention-tool" },
+  { name: "Decission Support System", link: "/decission-support-system" },
   { name: "Enterprise security", link: "/enterprise-security" },
   { name: "Automotive cyber security", link: "/automotive-cyber-security" },
   { name: "Virtual CISO", link: "/virtual-ciso" },
   { name: "Audit, Compliance & Training", link: "/audit-compliance-training" },
   { name: "VAPT services", link: "/vapt-services" },
   { name: "Outcome-Driven Metrics (ODM)", link: "/outcome-driven-metrics-odm" },
-  { name: "Phishing Prevention Tool", link: "/phishing-prevention-tool" },
-  { name: "Decission Support System", link: "/decission-support-system" },
+
 ];
 
 function Header() {

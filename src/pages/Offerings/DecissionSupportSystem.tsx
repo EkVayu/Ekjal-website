@@ -25,7 +25,7 @@ import {
 
 const heroData = {
   backgroundImage: Dsm,
-  title: "Advanced Cybersecurity Decision Support System",
+  title: "Decision Support System",
   subtitle: "AI-Driven Security Intelligence for Enterprise Risk Management",
   buttonText: "Explore Capabilities",
   buttonLink: "DecisionSupportSystem",
