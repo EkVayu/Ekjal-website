@@ -9,9 +9,8 @@ import {
   Brain,
   Eye,
   Lock,
-  Zap,
-  FileCheck,
-  Server,
+  
+
   Users,
   BarChart,
   Network,
@@ -19,13 +18,12 @@ import {
   CloudOff,
   Fingerprint,
   ChartBar,
-  Workflow,
+
   ShieldAlert,
   MessageSquare,
   Target,
   CheckCircle,
-  User,
-  UserCircle
+ 
 } from "lucide-react";
 
 const heroData = {

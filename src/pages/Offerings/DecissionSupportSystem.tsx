@@ -4,26 +4,23 @@ import OfferingHeroSection from "./Offering-hero-Section";
 import Dsm from '../../assets/offerings/Decison-support.jpg';
 import {
   Brain,
-  BarChart,
-  PieChart,
-  LineChart,
-  GitGraph,
+  
   Network,
-  Workflow,
+
   Shield,
-  AlertTriangle,
+  
   CheckCircle,
   Lock,
   Eye,
   Database,
-  Layers,
+  
   Settings,
   FileSearch,
-  UserCheck,
+ 
   ShieldAlert,
   Zap,
   Cloud,
-  Server
+  
 } from "lucide-react";
 
 const heroData = {
