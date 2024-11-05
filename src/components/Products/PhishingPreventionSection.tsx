@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Shield, Lock, Brain, Activity } from "lucide-react";
+import phishingpreventiontool from "../../assets/Products/phishingpreventiontool.jpg";
 
 const phishingPreventionData = {
   title: "Phishing Prevention Tool",
-  image:
-    "https://img.freepik.com/free-photo/hand-pressing-envelope-that-is-sent-world_1232-279.jpg?t=st=1730182702~exp=1730186302~hmac=d24cf2f976dedd917daf0e6fc79ec37ef083b8a7422269861bd13628d4a2fadf&w=996",
+  image: phishingpreventiontool,
   description:
     "Our AI-powered Phishing Prevention Tool actively protects users from social engineering attacks, ensuring data security and privacy.",
   features: [
@@ -54,12 +54,12 @@ const PhishingPreventionSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative h-[400px]"
           >
             <img
               src={phishingPreventionData.image}
               alt={phishingPreventionData.title}
-              className="relative rounded-2xl shadow-2xl w-full object-cover"
+              className="w-full h-full object-contain rounded-2xl"
             />
           </motion.div>
 

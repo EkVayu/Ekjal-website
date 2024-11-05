@@ -1,4 +1,5 @@
-import scm from "../../assets/Products/scm.png";
+import { motion } from "framer-motion";
+import scm from "../../assets/Products/scm.jpg";
 
 const scmSecurityData = {
   title: "SCM Security – Automotive",
@@ -15,45 +16,57 @@ const scmSecurityData = {
 
 const SCMSecuritySection = () => {
   return (
-    <section id="SCM-security-automotive" className="relative flex items-center text-white px-3 lg:px-20">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+    <section id="SCM-security-automotive" className="w-full px-3 lg:px-20">
+      <div className="w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-left mb-16"
+        >
+          <h2 className="text-4xl font-bold text-primary mb-4">
+            {scmSecurityData.title}
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl">
+            {scmSecurityData.description}
+          </p>
+        </motion.div>
 
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          <div className="lg:w-1/2 space-y-8">
-            <h2 className="text-5xl lg:text-7xl font-bold leading-tight">
-              {scmSecurityData.title}
-              <div className="h-1 w-24 bg-blue-500 mt-4" />
-            </h2>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative h-[400px]"
+          >
+            <img
+              src={scmSecurityData.image}
+              alt={scmSecurityData.title}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </motion.div>
 
-            <p className="text-xl lg:text-2xl text-blue-100">
-              {scmSecurityData.description}
-            </p>
-
-            <div className="grid gap-6">
-              {scmSecurityData.features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all group"
-                >
-                  <span className="text-xl font-semibold text-blue-300 group-hover:text-blue-400">
-                    {feature}
-                  </span>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            {scmSecurityData.features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-background p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="h-2 w-2 rounded-full bg-primary"></div>
+                  <span className="text-lg font-medium">{feature}</span>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="lg:w-1/2">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-blue-500/20 rounded-2xl blur-xl" />
-              <img
-                src={scmSecurityData.image}
-                alt={scmSecurityData.title}
-                className="relative rounded-xl w-full object-cover shadow-2xl border border-white/10"
-              />
-            </div>
-          </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

@@ -9,11 +9,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Cybersecurity from "../../assets/Home-page-images/ai-cybersecurity-machine-learning-virus.avif";
-import Threat from "../../assets/Home-page-images/data-center.avif";
-import Protection from "../../assets/Home-page-images/data-network-businessman.png";
-import Network from "../../assets/Home-page-images/hackers.avif";
-import Incident from "../../assets/Home-page-images/ai-cybersecurity-virus.avif";
+import phishing from "../../assets/Products/phishing.png";
+import SecureKnowledgeManagement from "../../assets/Products/SecureKnowledgeManagement.png";
+import DecisionSupportSystem from "../../assets/Products/Decision Support System.png";
+import SCMSecurityAutomotive from "../../assets/Products/SCM Security - Automotive.png";
+import PredictiveMaintenanceforMachines from "../../assets/Products/boy-is-standing-package-conveyor.png";
 
 const carouselItems = [
   {
@@ -21,7 +21,7 @@ const carouselItems = [
     heading: "Phishing Prevention Tool",
     paragraph:
       "Our advanced Phishing Prevention Tool employs cutting-edge AI and machine learning algorithms to protect your organization from sophisticated phishing attacks. We provide real-time threat detection, email filtering, and user awareness training to create a robust defense against social engineering attempts. With automated scanning, suspicious link detection, and detailed reporting, our solution ensures your team stays protected from evolving phishing threats.",
-    image: Cybersecurity,
+    image: phishing,
     sectionId: "phishing-prevention",
   },
   {
@@ -29,7 +29,7 @@ const carouselItems = [
     heading: "Secure Knowledge Management",
     paragraph:
       "Transform your organization's knowledge sharing with our Secure Knowledge Management system. We provide end-to-end encryption, granular access controls, and secure collaboration tools to protect your intellectual property. Our platform enables safe document sharing, version control, and audit trails while ensuring compliance with data protection regulations. Experience seamless knowledge transfer without compromising security.",
-    image: Threat,
+    image: SecureKnowledgeManagement,
     sectionId: "secure-knowledge-management",
   },
   {
@@ -37,7 +37,7 @@ const carouselItems = [
     heading: "Decision Support System",
     paragraph:
       "Empower your decision-making process with our intelligent Decision Support System. Leveraging advanced analytics and secure data processing, our platform provides real-time insights while maintaining data integrity. From risk assessment to resource allocation, our system helps you make informed decisions based on protected, accurate data, ensuring both security and operational efficiency.",
-    image: Protection,
+    image: DecisionSupportSystem,
     sectionId: "decision-support-system",
   },
   {
@@ -45,7 +45,7 @@ const carouselItems = [
     heading: "SCM Security - Automotive",
     paragraph:
       "Secure your automotive supply chain with our specialized SCM Security solution. We offer comprehensive protection for your entire supply chain network, from component tracking to delivery verification. Our system includes secure vendor management, real-time monitoring, and blockchain integration to ensure transparency and security across your automotive supply chain operations.",
-    image: Network,
+    image: SCMSecurityAutomotive,
     sectionId: "SCM-security-automotive",
   },
   {
@@ -53,7 +53,7 @@ const carouselItems = [
     heading: "Predictive Maintenance for Machines",
     paragraph:
       "Optimize your machine performance with our AI-powered Predictive Maintenance system. Using secure IoT sensors and advanced analytics, we help prevent equipment failures before they occur. Our solution monitors machine health, predicts maintenance needs, and provides actionable insights while maintaining robust security protocols to protect your operational data.",
-    image: Incident,
+    image: PredictiveMaintenanceforMachines,
     sectionId: "predictive-maintenance",
   },
 ];
@@ -154,7 +154,7 @@ function HeroSection() {
                 <img
                   src={item.image}
                   alt="Hero"
-                  className="rounded-md w-full h-full object-cover"
+                  className="rounded-md w-full h-full object-contain aspect-video"
                 />
               </motion.div>
             </CarouselItem>

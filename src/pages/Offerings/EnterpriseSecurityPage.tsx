@@ -12,7 +12,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import heroImage from "../../assets/offerings/3737.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 
 const heroData = {

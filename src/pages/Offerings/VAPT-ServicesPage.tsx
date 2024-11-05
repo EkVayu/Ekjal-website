@@ -9,8 +9,8 @@ import {
   Lock,
   CheckCircle,
 } from "lucide-react";
-import cyber from "../../assets/Products/cyber.avif";
-import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import cyber from "../../assets/offerings/c3c68de8-25e1-401d-8ea1-0814bc73eac8.jpg";
+import heroImage from "../../assets/offerings/cyber-security-essentials-safeguarding-digital-frontiers-faas.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 
 const heroData = {

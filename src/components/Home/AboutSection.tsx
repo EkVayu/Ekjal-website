@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import image from "../../assets/Home-page-images/3834682.jpg";
+import image from "../../assets/Home-page-images/939c5da1-6097-4d5c-a0ec-6071a1ef12b4.jpg";
 import { Link } from "react-router-dom";
 
 const data = {
@@ -11,7 +11,7 @@ const data = {
     {
       id: 1,
       description:
-        "In today’s digital era, cybersecurity isn’t just a necessity—it’s essential for business growth and innovation. At EkJal and EkVayu, we understand that protecting your digital assets shouldn’t be a headache. That’s why we offer tailored, innovative solutions to safeguard your business.",
+        "In today's digital era, cybersecurity isn't just a necessity—it's essential for business growth and innovation. At EkJal and EkVayu, we understand that protecting your digital assets shouldn't be a headache. That's why we offer tailored, innovative solutions to safeguard your business.",
     },
     {
       id: 2,
@@ -46,11 +46,15 @@ function AboutSection() {
       variants={containerVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="flex items-center justify-center  lg:py-16 py-5 px-3 lg:px-20"
+      className="flex items-center justify-center lg:py-16 py-5 px-3 lg:px-20"
     >
       <div className="w-full flex flex-col md:flex-row items-center md:gap-20 gap-5">
         <div className="w-full h-[500px] flex justify-center rounded-md overflow-hidden">
-          <img src={data.image} alt="Cybersecurity" className="w-full h-full" />
+          <img 
+            src={data.image} 
+            alt="Cybersecurity" 
+            className="w-full h-full object-cover rounded-2xl"
+          />
         </div>
         <div className="w-full text-foreground text-center md:text-left">
           <h1 className="lg:text-3xl text-xl font-bold mb-4 text-primary">{data.title}</h1>
@@ -59,7 +63,7 @@ function AboutSection() {
               {item.description}
             </p>
           ))}
-          <Button variant="default" asChild size="lg">
+          <Button variant="default" asChild size="lg" className="bg-primary text-primary-foreground text-lg px-8 py-3 rounded-md shadow-lg hover:shadow-xl">
             <Link to={data.button.link}>{data.button.text}</Link>
           </Button>
         </div>
