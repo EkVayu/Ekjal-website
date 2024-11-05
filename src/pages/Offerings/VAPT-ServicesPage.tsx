@@ -10,7 +10,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import cyber from "../../assets/offerings/c3c68de8-25e1-401d-8ea1-0814bc73eac8.jpg";
-import heroImage from "../../assets/offerings/cyber-security-essentials-safeguarding-digital-frontiers-faas.jpg";
+import heroImage from "../../assets/offerings/businessman-pointing-digital-s-futuristic-pattern-design-presenting-important-data-executive-displaying-symbols-crucial-information-messages.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 
 const heroData = {

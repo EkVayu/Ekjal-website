@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroImage from "../../assets/offerings/2_1.jpg";
+import heroImage from "../../assets/offerings/ODM.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 
 const heroData = {
