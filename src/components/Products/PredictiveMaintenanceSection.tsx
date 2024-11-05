@@ -59,7 +59,7 @@ const PredictiveMaintenanceSection = () => {
             <img
               src={predictiveMaintenanceData.image}
               alt={predictiveMaintenanceData.title}
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full object-contain aspect-square rounded-2xl"
             />
           </motion.div>
 

@@ -65,7 +65,7 @@ const VirtualCisoPage = () => {
       <OfferingHeroSection data={heroData} />
 
       {/* CISO Service Introduction */}
-      <section className="py-20 relative overflow-hidden">
+      <section id="VirtualCisoPage" className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
         <div className="w-full px-3 lg:px-20 relative">
           <motion.div

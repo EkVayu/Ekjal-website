@@ -39,6 +39,7 @@ const offeringItems = [
   { name: "Audit, Compliance & Training", link: "/audit-compliance-training" },
   { name: "VAPT services", link: "/vapt-services" },
   { name: "Outcome-Driven Metrics (ODM)", link: "/outcome-driven-metrics-odm" },
+  { name: "Phishing Prevention Tool", link: "/phishing-prevention-tool" },
 ];
 
 function Header() {
