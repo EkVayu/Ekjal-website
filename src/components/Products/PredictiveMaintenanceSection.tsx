@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Gauge, Brain, Calendar, BarChart } from "lucide-react";
-import predictive from "../../assets/Products/predictive.jpg";
+import predictive from "../../assets/Products/predictivee.jpg";
 
 const predictiveMaintenanceData = {
   title: "Predictive Maintenance for Machines",
@@ -54,12 +54,12 @@ const PredictiveMaintenanceSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative h-[400px]"
+            className="relative h-[420px]"
           >
             <img
               src={predictiveMaintenanceData.image}
               alt={predictiveMaintenanceData.title}
-              className="w-full h-full object-contain aspect-square rounded-2xl"
+              className="w-full h-full object-cover aspect-square rounded-2xl"
             />
           </motion.div>
 

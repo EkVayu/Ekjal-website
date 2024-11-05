@@ -40,6 +40,7 @@ const offeringItems = [
   { name: "VAPT services", link: "/vapt-services" },
   { name: "Outcome-Driven Metrics (ODM)", link: "/outcome-driven-metrics-odm" },
   { name: "Phishing Prevention Tool", link: "/phishing-prevention-tool" },
+  { name: "Decission Support System", link: "/decission-support-system" },
 ];
 
 function Header() {

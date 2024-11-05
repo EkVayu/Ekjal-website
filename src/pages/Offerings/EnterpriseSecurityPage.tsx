@@ -12,7 +12,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "../../assets/offerings/3737.jpg";
+import heroImage from "../../assets/offerings/enterprise.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 
 const heroData = {

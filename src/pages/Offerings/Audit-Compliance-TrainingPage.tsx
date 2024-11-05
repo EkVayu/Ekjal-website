@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import cyber from "../../assets/offerings/law-agents-team-inspecting-clues.jpg";
+import cyber from "../../assets/offerings/cyber.jpg";
 import { Link } from "react-router-dom";
 import OfferingHeroSection from "./Offering-hero-Section";
 // import heroImage from "../../assets/offerings/special-operations-soldier-allocating-resources-based-mission-needs.jpg";

@@ -9,8 +9,8 @@ import {
   Lock,
   CheckCircle,
 } from "lucide-react";
-import cyber from "../../assets/offerings/c3c68de8-25e1-401d-8ea1-0814bc73eac8.jpg";
-import heroImage from "../../assets/offerings/businessman-pointing-digital-s-futuristic-pattern-design-presenting-important-data-executive-displaying-symbols-crucial-information-messages.jpg";
+import vpn from "../../assets/offerings/VPN.jpg";
+import heroImage from "../../assets/offerings/VAPT.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 
 const heroData = {
@@ -39,7 +39,7 @@ const VAPTServicesPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
             >
               <img
-                src={cyber}
+                src={vpn}
                 alt="VAPT Illustration"
                 className="rounded-2xl shadow-2xl"
               />

@@ -13,7 +13,7 @@ import phishing from "../../assets/Products/phishing.png";
 import SecureKnowledgeManagement from "../../assets/Products/SecureKnowledgeManagement.png";
 import DecisionSupportSystem from "../../assets/Products/Decision Support System.png";
 import SCMSecurityAutomotive from "../../assets/Products/SCM Security - Automotive.png";
-import PredictiveMaintenanceforMachines from "../../assets/Products/boy-is-standing-package-conveyor.png";
+import PredictiveMaintenanceforMachines from "../../assets/Products/predictivee.png";
 
 const carouselItems = [
   {

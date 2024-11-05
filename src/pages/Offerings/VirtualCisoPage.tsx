@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Users, FileCheck, Target, CheckCircle, Award } from "lucide-react";
-import heroImage from "../../assets/offerings/cloud-computing-technology-online-data-storage-global-data-sharing.jpg";
+import heroImage from "../../assets/offerings/ciso.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 
 const heroData = {

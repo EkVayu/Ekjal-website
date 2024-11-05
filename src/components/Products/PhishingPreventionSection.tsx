@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Lock, Brain, Activity } from "lucide-react";
-import phishingpreventiontool from "../../assets/Products/phishingpreventiontool.jpg";
+import phishingpreventiontool from "../../assets/Products/phishing-prevention-toool.jpg";
 
 const phishingPreventionData = {
   title: "Phishing Prevention Tool",
@@ -59,7 +59,7 @@ const PhishingPreventionSection = () => {
             <img
               src={phishingPreventionData.image}
               alt={phishingPreventionData.title}
-              className="w-full h-full object-contain rounded-2xl"
+              className="w-full h-full object-cover rounded-2xl"
             />
           </motion.div>
 

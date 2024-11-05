@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import cyber from "../../assets/offerings/rb_51106.png";
 import { Link } from "react-router-dom";
-import heroImage from "../../assets/offerings/595d5098-4626-4fe4-8602-36e227f8a3a6.jpg";
+import heroImage from "../../assets/offerings/automotive.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 import {
   Shield,
