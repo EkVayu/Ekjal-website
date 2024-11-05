@@ -9,8 +9,8 @@ import {
   Lock,
   CheckCircle,
 } from "lucide-react";
-import cyber from "../../assets/Products/cyber.avif";
-import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import vpn from "../../assets/offerings/VPN.jpg";
+import heroImage from "../../assets/offerings/VAPT.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 
 const heroData = {
@@ -39,7 +39,7 @@ const VAPTServicesPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
             >
               <img
-                src={cyber}
+                src={vpn}
                 alt="VAPT Illustration"
                 className="rounded-2xl shadow-2xl"
               />

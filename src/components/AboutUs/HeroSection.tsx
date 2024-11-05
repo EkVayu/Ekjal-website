@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import heroImage from "../../assets/AboutUs/hero.jpg";
 
 const heroData = {
   backgroundImage: heroImage,

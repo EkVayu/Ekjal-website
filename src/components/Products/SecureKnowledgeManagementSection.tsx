@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import customersupport from "../../assets/Products/customer-support.png";
+import SecureKnowledgeManagement from "../../assets/Products/SecureKnowledgeManagementt.jpg";
 
 const secureKnowledgeManagementData = {
   title: "Secure Knowledge Management",
-  image: customersupport,
+  image: SecureKnowledgeManagement,
   description:
     "Our Secure Knowledge Management tool uses AI-based analytics to classify information, enforce security, and provide easy access to authorized users across various data formats.",
   features: [
@@ -32,13 +32,12 @@ const SecureKnowledgeManagementSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative group"
+            className="relative"
           >
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary/50 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
             <img
               src={secureKnowledgeManagementData.image}
               alt={secureKnowledgeManagementData.title}
-              className="relative rounded-lg shadow-2xl w-full h-[400px] transform group-hover:scale-[1.02] transition duration-500"
+              className="w-full h-96 object-cover rounded-2xl"
             />
           </motion.div>
 
@@ -59,7 +58,7 @@ const SecureKnowledgeManagementSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center space-x-3 bg-background/50 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                  className="flex items-center space-x-3 bg-background p-4 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="h-2 w-2 rounded-full bg-primary"></div>
                   <span className="text-lg">{feature}</span>

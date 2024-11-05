@@ -14,6 +14,8 @@ import VAPTServicesPage from "./pages/Offerings/VAPT-ServicesPage";
 import ErrorPage from "./pages/Error";
 import ScrollToTopButton from "./components/Common/ScrollToTopButton ";
 import OutcomeDrivenMetrics from "./pages/Offerings/Outcome-Driven-Metrics";
+import PhishingPreventionTool from "./pages/Offerings/PhishingPreventionTool";
+import DecissionSupportSystem from "./pages/Offerings/DecissionSupportSystem";
 function App() {
   return (
     <Router>
@@ -103,6 +105,22 @@ function App() {
           element={
             <Layout>
               <OutcomeDrivenMetrics />
+            </Layout>
+          }
+        />
+        <Route
+          path="/phishing-prevention-tool"
+          element={
+            <Layout>
+              <PhishingPreventionTool />
+            </Layout>
+          }
+        />
+        <Route
+          path="/decission-support-system"
+          element={
+            <Layout>
+              <DecissionSupportSystem />
             </Layout>
           }
         />

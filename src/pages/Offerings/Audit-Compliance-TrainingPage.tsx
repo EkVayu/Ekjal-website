@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import cyber from "../../assets/Products/cyber.avif";
+import cyber from "../../assets/offerings/cyber.jpg";
 import { Link } from "react-router-dom";
 import OfferingHeroSection from "./Offering-hero-Section";
-import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+// import heroImage from "../../assets/offerings/special-operations-soldier-allocating-resources-based-mission-needs.jpg";
+import heroImage from "../../assets/offerings/Audit.jpg";
 import {
   Shield,
   Server,

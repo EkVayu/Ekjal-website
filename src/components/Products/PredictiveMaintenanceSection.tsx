@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Gauge, Brain, Calendar, BarChart } from "lucide-react";
-import predictive from "../../assets/Products/predictive.png";
+import predictive from "../../assets/Products/predictivee.jpg";
 
 const predictiveMaintenanceData = {
   title: "Predictive Maintenance for Machines",
@@ -51,6 +51,19 @@ const PredictiveMaintenanceSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative h-[420px]"
+          >
+            <img
+              src={predictiveMaintenanceData.image}
+              alt={predictiveMaintenanceData.title}
+              className="w-full h-full object-cover aspect-square rounded-2xl"
+            />
+          </motion.div>
+
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -71,18 +84,6 @@ const PredictiveMaintenanceSection = () => {
                 <p className="text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <img
-              src={predictiveMaintenanceData.image}
-              alt={predictiveMaintenanceData.title}
-              className="relative rounded-2xl shadow-2xl w-full h-96 object-cover"
-            />
           </motion.div>
         </div>
       </div>

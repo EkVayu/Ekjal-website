@@ -10,12 +10,12 @@ import Autoplay from "embla-carousel-autoplay";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
-import Cybersecurity from "../../assets/Home-page-images/ai-cybersecurity-machine-learning-virus.avif";
-import Threat from "../../assets/Home-page-images/data-center.avif";
-import Protection from "../../assets/Home-page-images/data-network-businessman.png";
-import Network from "../../assets/Home-page-images/hackers.avif";
-import Incident from "../../assets/Home-page-images/ai-cybersecurity-virus.avif";
-import IoT from "../../assets/Home-page-images/hand-holding-phone-with-lock-screen.avif";
+import Cybersecurity from "../../assets/Home-page-images/Cybersecurity.jpg";
+import Threat from "../../assets/Home-page-images/Threatt.jpg";
+import Protection from "../../assets/Home-page-images/Protectionn.jpg";
+import Network from "../../assets/Home-page-images/Networkk.jpg";
+import Incident from "../../assets/Home-page-images/Incident.jpeg";
+import IoT from "../../assets/Home-page-images/IoTt.jpg";
 
 const carouselItems = [
   {
@@ -94,7 +94,7 @@ function HeroSection() {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="flex items-center bg-secondary px-3 lg:px-20 pt-5"
+      className="flex items-center bg-white px-3 lg:px-20 pt-5"
     >
       <Carousel
         plugins={[
@@ -135,12 +135,13 @@ function HeroSection() {
                 <motion.div variants={itemVariants}>
                   <Button
                     size="lg"
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-300 text-lg px-8 py-3 rounded-md shadow-lg hover:shadow-xl"
+                    className="bg-primary text-primary-foreground text-lg px-8 py-3 rounded-md shadow-lg hover:shadow-xl"
                   >
                     Learn More
                   </Button>
                 </motion.div>
               </motion.div>
+
               <motion.div
                 variants={itemVariants}
                 className="w-full md:w-1/2 h-[300px] sm:h-[400px] md:h-[500px] relative rounded-md overflow-hidden"
@@ -148,8 +149,10 @@ function HeroSection() {
                 <img
                   src={item.image}
                   alt="Hero"
-                  className="rounded-2xl  w-full h-full object-cover"
+                  className="rounded-2xl w-full h-full object-contain aspect-video mix-blend-overlay opacity-90"
                 />
+                {/* Add an overlay gradient */}
+               
               </motion.div>
             </CarouselItem>
           ))}

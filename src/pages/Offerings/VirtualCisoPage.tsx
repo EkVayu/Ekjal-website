@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Users, FileCheck, Target, CheckCircle, Award } from "lucide-react";
-import heroImage from "../../assets/Products/man-sits-desk-with-laptop-monitor-showing-shield_624163-5544.avif";
+import heroImage from "../../assets/offerings/ciso.jpg";
 import OfferingHeroSection from "./Offering-hero-Section";
 
 const heroData = {
@@ -65,7 +65,7 @@ const VirtualCisoPage = () => {
       <OfferingHeroSection data={heroData} />
 
       {/* CISO Service Introduction */}
-      <section className="py-20 relative overflow-hidden">
+      <section id="VirtualCisoPage" className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
         <div className="w-full px-3 lg:px-20 relative">
           <motion.div
