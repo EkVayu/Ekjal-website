@@ -85,7 +85,7 @@ const ContactUs = () => {
       });
   };
   return (
-    <div className="">
+    <div className="px-3 lg:px-20">
       <ToastContainer />
       <motion.div
         className="w-full min-h-screen rounded-md  overflow-hidden flex flex-col lg:flex-row"
