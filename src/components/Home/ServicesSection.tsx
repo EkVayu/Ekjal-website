@@ -1,4 +1,3 @@
-
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
@@ -154,7 +153,10 @@ function ServicesSection() {
               </h3>
               <ul className="list-disc pl-6">
                 {service.description.map((item, index) => (
-                  <li key={index} className="lg:text-lg text-sm text-muted-foreground mb-2 leading-relaxed">
+                  <li
+                    key={index}
+                    className="lg:text-lg text-sm text-muted-foreground mb-2 leading-relaxed"
+                  >
                     {item.text}
                   </li>
                 ))}

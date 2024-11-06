@@ -152,7 +152,6 @@ function HeroSection() {
                   className="rounded-2xl w-full h-full object-contain aspect-video mix-blend-overlay opacity-90"
                 />
                 {/* Add an overlay gradient */}
-               
               </motion.div>
             </CarouselItem>
           ))}

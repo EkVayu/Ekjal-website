@@ -19,7 +19,10 @@ const featureIcons = [Shield, LineChart, BarChart3, Network];
 
 const DecisionSupportSystemSection = () => {
   return (
-    <section id="decision-support-system" className="w-full px-3 lg:px-20 py-16">
+    <section
+      id="decision-support-system"
+      className="w-full px-3 lg:px-20 py-16"
+    >
       <div className="w-full">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-primary mb-12 text-left bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
@@ -75,7 +78,9 @@ const DecisionSupportSystemSection = () => {
                         <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
                           <Icon className="w-5 h-5 text-primary" />
                         </div>
-                        <span className="text-foreground/80 font-medium">{feature}</span>
+                        <span className="text-foreground/80 font-medium">
+                          {feature}
+                        </span>
                       </div>
                     </motion.div>
                   );
