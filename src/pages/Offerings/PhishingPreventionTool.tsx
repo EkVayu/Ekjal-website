@@ -174,7 +174,7 @@ const PhishingPreventionTool = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
             { number: "95%", label: "Threat Detection Rate", icon: Shield },
-            { number: "<0.001%", label: "False Positive Rate", icon: ChartBar },
+            { number: "<5%", label: "False Positive Rate", icon: ChartBar },
             { number: "24/7", label: "Active Monitoring", icon: Eye },
             { number: "100M+", label: "Threats Blocked", icon: ShieldAlert },
           ].map((stat, index) => (
