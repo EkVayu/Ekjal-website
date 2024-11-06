@@ -99,7 +99,9 @@ function OurCybersecurityCapabilities() {
                           className="flex items-center"
                         >
                           <ChevronRight className="mr-2 text-primary" />
-                          <span className="lg:text-lg text-sm text-muted-foreground leading-relaxed">{item}</span>
+                          <span className="lg:text-lg text-sm text-muted-foreground leading-relaxed">
+                            {item}
+                          </span>
                         </motion.li>
                       ))}
                     </ul>

@@ -94,7 +94,9 @@ function TestimonialsSection() {
                   <p className="text-gray-600 text-sm">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{testimonial.content}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                {testimonial.content}
+              </p>
             </motion.div>
           ))}
         </div>

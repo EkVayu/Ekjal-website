@@ -88,7 +88,7 @@ const ContactUs = () => {
     <div className="">
       <ToastContainer />
       <motion.div
-        className="w-full min-h-screen rounded-md shadow-2xl overflow-hidden flex flex-col lg:flex-row"
+        className="w-full min-h-screen rounded-md  overflow-hidden flex flex-col lg:flex-row"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

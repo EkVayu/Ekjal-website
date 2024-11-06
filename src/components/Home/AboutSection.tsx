@@ -50,20 +50,30 @@ function AboutSection() {
     >
       <div className="w-full flex flex-col md:flex-row items-center md:gap-20 gap-5">
         <div className="w-full h-[500px] flex justify-center rounded-md overflow-hidden">
-          <img 
-            src={data.image} 
-            alt="Cybersecurity" 
+          <img
+            src={data.image}
+            alt="Cybersecurity"
             className="w-full h-full object-cover rounded-2xl"
           />
         </div>
         <div className="w-full text-foreground text-center md:text-left">
-          <h1 className="lg:text-3xl text-xl font-bold mb-4 text-primary">{data.title}</h1>
+          <h1 className="lg:text-3xl text-xl font-bold mb-4 text-primary">
+            {data.title}
+          </h1>
           {data.description.map((item) => (
-            <p key={item.id} className="lg:text-lg text-sm text-muted-foreground mb-8 leading-relaxed">
+            <p
+              key={item.id}
+              className="lg:text-lg text-sm text-muted-foreground mb-8 leading-relaxed"
+            >
               {item.description}
             </p>
           ))}
-          <Button variant="default" asChild size="lg" className="bg-primary text-primary-foreground text-lg px-8 py-3 rounded-md shadow-lg hover:shadow-xl">
+          <Button
+            variant="default"
+            asChild
+            size="lg"
+            className="bg-primary text-primary-foreground text-lg px-8 py-3 rounded-md shadow-lg hover:shadow-xl"
+          >
             <Link to={data.button.link}>{data.button.text}</Link>
           </Button>
         </div>

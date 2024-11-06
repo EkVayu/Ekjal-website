@@ -9,21 +9,16 @@ import {
   Brain,
   Eye,
   Lock,
-  
-
   Users,
   BarChart,
   Network,
   Database,
-  CloudOff,
   Fingerprint,
   ChartBar,
-
   ShieldAlert,
   MessageSquare,
   Target,
   CheckCircle,
- 
 } from "lucide-react";
 
 const heroData = {
@@ -39,7 +34,7 @@ const heroData = {
 const phishingFeatures = [
   {
     icon: Brain,
-    title: "AI-Powered Threat Detection",
+    title: "AI-Powered Spam Detection",
     description:
       "Advanced neural networks identify sophisticated phishing patterns",
     benefits: [
@@ -66,7 +61,7 @@ const phishingFeatures = [
   },
   {
     icon: Database,
-    title: "Threat Intelligence Database",
+    title: "Spam Intelligence Database",
     description: "Global threat database with real-time updates",
     benefits: [
       "Global threat feeds",
@@ -85,10 +80,14 @@ const phishingFeatures = [
     ],
   },
   {
-    icon: CloudOff,
-    title: "Offline Protection",
-    description: "Continuous protection even without internet connection",
-    benefits: ["Local scanning", "Cached definitions", "Offline updates"],
+    icon: Shield,
+    title: "Multi-Layer Protection",
+    description: "Comprehensive security through multiple defense mechanisms",
+    benefits: [
+      "Deep content inspection",
+      "URL reputation checking",
+      "Attachment sandboxing",
+    ],
   },
 ];
 
@@ -338,11 +337,11 @@ const PhishingPreventionTool = () => {
             {
               step: "2",
               title: "Analysis",
-              description: "AI-powered threat detection",
+              description: "AI-powered threat/spam detection",
             },
             {
               step: "3",
-              title: "Verification",
+              title: "Detection",
               description: "Multi-layer security checks",
             },
             {
