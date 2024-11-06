@@ -1,12 +1,12 @@
+// AboutSection.js
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import image from "../../assets/Home-page-images/939c5da1-6097-4d5c-a0ec-6071a1ef12b4.jpg";
 import { Link } from "react-router-dom";
 
 const data = {
-  title: " Empowering Your Business with Advanced Cybersecurity Solutions",
+  title: "Empowering Your Business with Advanced Cybersecurity Solutions",
   description: [
     {
       id: 1,
@@ -16,7 +16,7 @@ const data = {
     {
       id: 2,
       description:
-        " By partnering with us, you gain access to cutting-edge technologies and proactive monitoring systems that ensure your operations remain secure. We're not just focused on defense; we're committed to empowering your organization to thrive in a digital-first world.",
+        "By partnering with us, you gain access to cutting-edge technologies and proactive monitoring systems that ensure your operations remain secure. We're not just focused on defense; we're committed to empowering your organization to thrive in a digital-first world.",
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ const data = {
   image: image,
   button: {
     text: "Explore Our Solutions",
-    link: "/about-us",
+    link: "/products",
   },
 };
 
@@ -70,7 +70,6 @@ function AboutSection() {
           ))}
           <Button
             variant="default"
-            asChild
             size="lg"
             className="bg-primary text-primary-foreground text-lg px-8 py-3 rounded-md shadow-lg hover:shadow-xl"
           >

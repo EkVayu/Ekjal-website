@@ -7,10 +7,39 @@ import img3 from "../../assets/services/safety-car_6747875.png";
 import img4 from "../../assets/services/public-domain_5047631.png";
 import img5 from "../../assets/services/recovery_7394483.png";
 import img6 from "../../assets/services/usb_12538296.png";
+import img7 from '../../assets/Home-page-images/img4.png'
+import img8 from '../../assets/Home-page-images/img8.png'
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 
 const services = [
+  {
+    icon: img7, // You'll need to import appropriate icons for these new services
+    title: "Phishing Prevention Tool",
+    link: "/phishing-prevention-tool",
+    description: [
+      {
+        text: "Real-time Email Scanning: Detect and block phishing attempts instantly.",
+      },
+      {
+        text: "User Education: Interactive training modules for phishing awareness.",
+      },
+    ],
+  },
+  {
+    icon: img8, // You'll need to import appropriate icons for these new services
+    title: "Decision Support System",
+    link: "/decission-support-system",
+    description: [
+      {
+        text: "Risk Analysis: Data-driven security decision making framework.",
+      },
+      {
+        text: "Automated Recommendations: AI-powered security measure suggestions.",
+      },
+    ],
+  },
+
   {
     icon: img1,
     title: "Enterprise Security",

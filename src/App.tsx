@@ -3,6 +3,7 @@ import NotFound from "./pages/NotFound";
 import Layout from "./Layout/Layout";
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
+import ScrollToTop from "./components/Common/ScrollToTop";
 import ContactUsPage from "./pages/ContactUsPage";
 import JobsPage from "./pages/JobsPage";
 import ProductsPage from "./pages/ProductsPage";
@@ -19,6 +20,7 @@ import DecissionSupportSystem from "./pages/Offerings/DecissionSupportSystem";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"

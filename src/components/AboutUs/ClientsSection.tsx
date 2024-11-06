@@ -3,6 +3,7 @@ import ntpc from "../../assets/Customer/ntpc.png";
 import brbcl from "../../assets/Customer/brbcl.jpg";
 import nhpcl from "../../assets/Customer/nhpcl.jpg";
 import idex from "../../assets/Customer/idex.jpg";
+import voxomas from "../../assets/Customer/voxomos.png";
 
 const clientsData = {
   sectionTitle:
@@ -14,6 +15,7 @@ const clientsData = {
     { name: "NTPC", logo: ntpc },
     { name: "BRBCL", logo: brbcl },
     { name: "NHPCL", logo: nhpcl },
+    { name: "voxomas", logo: voxomas },
   ],
 };
 
@@ -35,7 +37,7 @@ const ClientsSection = () => {
           </p>
         </motion.div>
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
