@@ -19,13 +19,16 @@ import {
   MessageSquare,
   Target,
   CheckCircle,
+  Zap,
+  Workflow,
+  Box,
+  Waves,
 } from "lucide-react";
 
 const heroData = {
   backgroundImage: heroImage,
-  title: "Next-Gen Phishing Defense Platform",
-  subtitle:
-    "Enterprise-grade Email Security powered by Advanced AI & Machine Learning",
+  title: "Anti Phishing Browser Email",
+  subtitle: "AI based multilayered adaptive Phishing email blocker and handler",
   buttonText: "Discover Protection",
   buttonLink: "PhishingPreventionTool",
 };
@@ -170,7 +173,7 @@ const PhishingPreventionTool = () => {
       <div className="container mx-auto px-4 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {[
-            { number: "99.9%", label: "Threat Detection Rate", icon: Shield },
+            { number: "95%", label: "Threat Detection Rate", icon: Shield },
             { number: "<0.001%", label: "False Positive Rate", icon: ChartBar },
             { number: "24/7", label: "Active Monitoring", icon: Eye },
             { number: "100M+", label: "Threats Blocked", icon: ShieldAlert },
@@ -408,12 +411,165 @@ const PhishingPreventionTool = () => {
     </motion.section>
   );
 
+  const StrengthSection = () => (
+    <section className="py-20 bg-gradient-to-r from-background via-primary/5 to-background">
+      <div className="container mx-auto px-4 lg:px-20">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <h2 className="text-5xl font-bold text-primary mb-6">
+            Our Core Strengths
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Advanced protection powered by next-generation technologies
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {[
+            {
+              icon: Shield,
+              title: "Adaptive Threat Handler",
+              description: "Dynamic threat response system",
+              features: [
+                "Real-time adaptation",
+                "Behavioral analysis",
+                "Automated response",
+                "Pattern recognition",
+              ],
+            },
+            {
+              icon: Waves,
+              title: "Flow & Wave Frameworks",
+              description: "Comprehensive defense architecture",
+              features: [
+                "User engagement framework",
+                "Continuous learning",
+                "Skill enhancement",
+                "Adaptive training",
+              ],
+            },
+            {
+              icon: Box,
+              title: "Sandbox & Quarantine",
+              description: "Secure isolation environment",
+              features: [
+                "Safe execution",
+                "Threat containment",
+                "Behavioral analysis",
+                "Risk mitigation",
+              ],
+            },
+          ].map((strength, index) => (
+            <motion.div
+              key={index}
+              className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <div className="bg-primary/10 p-4 rounded-full w-fit mb-6">
+                <strength.icon className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground/90">
+                {strength.title}
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                {strength.description}
+              </p>
+              <ul className="space-y-2">
+                {strength.features.map((feature, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-center text-muted-foreground"
+                  >
+                    <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              icon: Mail,
+              title: "Advanced Anti-Phishing",
+              description: "Multi-layered email protection",
+              points: [
+                "Email security protocol verification",
+                "Threat database integration",
+                "AI-powered classification",
+                "Real-time scanning",
+              ],
+            },
+            {
+              icon: Brain,
+              title: "Adaptive Defence",
+              description: "Intelligent threat adaptation",
+              points: [
+                "AI system adaptation",
+                "New threat learning",
+                "Intelligence integration",
+                "Continuous evolution",
+              ],
+            },
+            {
+              icon: Workflow,
+              title: "Wave & Flow",
+              description: "User engagement system",
+              points: [
+                "Continuous learning framework",
+                "Skill development tracking",
+                "Performance analytics",
+                "Adaptive training modules",
+              ],
+            },
+          ].map((feature, index) => (
+            <motion.div
+              key={index}
+              className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-primary"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <div className="bg-primary/10 p-4 rounded-full w-fit mb-6">
+                <feature.icon className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground/90">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground mb-6">
+                {feature.description}
+              </p>
+              <ul className="space-y-3">
+                {feature.points.map((point, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-center text-muted-foreground"
+                  >
+                    <Zap className="w-4 h-4 text-primary mr-2" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
   return (
     <div className="bg-background text-foreground">
       <OfferingHeroSection data={heroData} />
       <div id="PhishingPreventionTool">
         <StatisticsSection />
         <FeaturesSection />
+        <StrengthSection />
         <ThreatProtectionSection />
         <WorkflowSection />
         <CapabilitiesSection />

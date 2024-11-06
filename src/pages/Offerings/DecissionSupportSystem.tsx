@@ -14,13 +14,25 @@ import {
   FileSearch,
   ShieldAlert,
   Zap,
-  Cloud,
+  Target,
+  Sparkles,
+  Cpu,
+  Timer,
+  Scale,
+  FileStack,
+  Languages,
+  Star,
+  Layers,
+  BarChart,
+  
+  
 } from "lucide-react";
 
 const heroData = {
   backgroundImage: Dsm,
   title: "Decision Support System",
-  subtitle: "AI-Driven Security Intelligence for Enterprise Risk Management",
+  subtitle:
+    "AI based information collation and presentation system on 3D georaphical interface",
   buttonText: "Explore Capabilities",
   buttonLink: "DecisionSupportSystem",
 };
@@ -67,29 +79,35 @@ const analyticsFeatures = [
     ],
   },
   {
-    icon: Cloud,
-    title: "Cloud Security",
-    description: "Cloud infrastructure protection",
+    icon: Brain,
+    title: "Reasonal Analysis",
+    description: "Intelligent data reasoning and pattern analysis system",
     benefits: [
-      "Cloud asset monitoring",
-      "Configuration analysis",
-      "Compliance checking",
+      "Advanced pattern recognition",
+      "Predictive analytics",
+
+      "Real-time insights generation",
     ],
   },
+
   {
-    icon: Database,
-    title: "Data Protection",
-    description: "Advanced data security measures",
-    benefits: ["Data encryption", "DLP integration", "Privacy controls"],
+    icon: Target,
+    title: "Decision Master",
+    description: "Advanced decision orchestration and optimization platform",
+    benefits: [
+      "Strategic decision modeling",
+      "Multi-criteria analysis",
+      "Risk-based prioritization",
+      "Scenario simulation",
+    ],
   },
 ];
-
 const securityMetrics = [
   {
-    number: "99.9%",
-    label: "Threat Detection Rate",
-    icon: ShieldAlert,
-    description: "Industry-leading detection accuracy",
+    number: "∞",
+    label: "Wide Knowledge",
+    icon: Sparkles,
+    description: "Infinite learning potential",
   },
   {
     number: "<30sec",
@@ -99,7 +117,7 @@ const securityMetrics = [
   },
   {
     number: "24/7/365",
-    label: "Monitoring",
+    label: "Strong Monitoring",
     icon: Eye,
     description: "Continuous security surveillance",
   },
@@ -357,6 +375,152 @@ const DecisionSupportSystem = () => {
       </div>
     </motion.section>
   );
+  const StrengthsSection = () => (
+    <section className="py-20 bg-gradient-to-r from-background via-primary/5 to-background">
+      <div className="container mx-auto px-4 lg:px-20">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <h2 className="text-5xl font-bold text-primary mb-6">Our Core Strengths</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Powered by advanced AI capabilities and years of expertise
+          </p>
+        </motion.div>
+  
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            {
+              icon: Cpu,
+              title: "Advanced AI Engine",
+              features: [
+                "State-of-the-art algorithms",
+                "Real-time processing",
+                "Adaptive learning capabilities",
+                "Neural network architecture"
+              ]
+            },
+            {
+              icon: Timer,
+              title: "10+ Years AI Maturity",
+              features: [
+                "Proven track record",
+                "Refined algorithms",
+                "Industry expertise",
+                "Continuous evolution"
+              ]
+            },
+            {
+              icon: FileSearch,
+              title: "Data Drill Down",
+              features: [
+                "Granular analysis",
+                "Deep data exploration",
+                "Interactive visualization",
+                "Pattern recognition"
+              ]
+            },
+            {
+              icon: Scale,
+              title: "Truth Score System",
+              features: [
+                "AI-powered verification",
+                "Multi-source validation",
+                "Confidence metrics",
+                "Accuracy assessment"
+              ]
+            }
+          ].map((strength, index) => (
+            <motion.div
+              key={index}
+              className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <div className="bg-primary/10 p-4 rounded-full w-fit mb-6">
+                <strength.icon className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground/90">{strength.title}</h3>
+              <ul className="space-y-2">
+                {strength.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-muted-foreground">
+                    <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+  
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              icon: FileStack,
+              title: "Multi-Data Sources",
+              description: "Support for Text, MS Office, PDF and various file formats",
+              features: ["Document parsing", "Format conversion", "Content extraction"]
+            },
+            {
+              icon: Languages,
+              title: "Multi-Language Support",
+              description: "Complete coverage of Indian languages and international languages",
+              features: ["Regional language processing", "Translation capabilities", "Cultural context"]
+            },
+            {
+              icon: Database,
+              title: "Source Tracking",
+              description: "Comprehensive data lineage and source verification",
+              features: ["Origin tracking", "Version control", "Change history"]
+            },
+            {
+              icon: Star,
+              title: "Confidence Scoring",
+              description: "AI-powered truth scoring with analyst validation",
+              features: ["Automated scoring", "Manual verification", "Confidence metrics"]
+            },
+            {
+              icon: Layers,
+              title: "Classification Handling",
+              description: "Advanced data classification and security levels",
+              features: ["Security clearance", "Access control", "Data protection"]
+            },
+            {
+              icon: BarChart,
+              title: "Analytics Dashboard",
+              description: "Comprehensive visualization and reporting",
+              features: ["Real-time monitoring", "Custom reports", "Trend analysis"]
+            }
+          ].map((feature, index) => (
+            <motion.div
+              key={index}
+              className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <div className="bg-primary/10 p-4 rounded-full w-fit mb-6">
+                <feature.icon className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground/90">{feature.title}</h3>
+              <p className="text-muted-foreground mb-4">{feature.description}</p>
+              <ul className="space-y-2">
+                {feature.features.map((item, idx) => (
+                  <li key={idx} className="flex items-center text-muted-foreground">
+                    <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+  
 
   return (
     <div className="bg-background text-foreground">
@@ -364,6 +528,7 @@ const DecisionSupportSystem = () => {
       <div id="DecisionSupportSystem">
         <SecurityMetricsSection />
         <AdvancedAnalyticsSection />
+        <StrengthsSection />
         <SecurityWorkflowSection />
         <BenefitsSection />
         <CallToAction />
