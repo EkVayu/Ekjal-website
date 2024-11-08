@@ -188,6 +188,7 @@ const ContactUs = () => {
             </motion.div>
             <motion.button
               type="submit"
+              disabled={loading}
               className="w-full bg-primary text-secondary py-3 px-4 rounded-lg hover:bg-primary/90"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
