@@ -3,6 +3,7 @@ import NotFound from "./pages/NotFound";
 import Layout from "./Layout/Layout";
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
+import ScrollToTop from "./components/Common/ScrollToTop";
 import ContactUsPage from "./pages/ContactUsPage";
 import JobsPage from "./pages/JobsPage";
 import ProductsPage from "./pages/ProductsPage";
@@ -12,13 +13,14 @@ import VirtualCisoPage from "./pages/Offerings/VirtualCisoPage";
 import AuditComplianceTrainingPage from "./pages/Offerings/Audit-Compliance-TrainingPage";
 import VAPTServicesPage from "./pages/Offerings/VAPT-ServicesPage";
 import ErrorPage from "./pages/Error";
-import ScrollToTopButton from "./components/Common/ScrollToTopButton ";
+import ScrollToTopButton from "./components/Common/ScrollToTopButton";
 import OutcomeDrivenMetrics from "./pages/Offerings/Outcome-Driven-Metrics";
 import PhishingPreventionTool from "./pages/Offerings/PhishingPreventionTool";
 import DecissionSupportSystem from "./pages/Offerings/DecissionSupportSystem";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"

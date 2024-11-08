@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import { useLocation } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "../components/ui/dropdown-menu";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,7 +13,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+} from "../components/ui/navigation-menu";
 import { ChevronDown, Menu, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo-removebg.png";
@@ -24,7 +24,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "../components/ui/sheet";
 
 const navItems = [
   { name: "Products", link: "/products" },
@@ -33,14 +33,14 @@ const navItems = [
 ];
 
 const offeringItems = [
+  { name: "Phishing Prevention Tool", link: "/phishing-prevention-tool" },
+  { name: "Decission Support System", link: "/decission-support-system" },
   { name: "Enterprise security", link: "/enterprise-security" },
   { name: "Automotive cyber security", link: "/automotive-cyber-security" },
   { name: "Virtual CISO", link: "/virtual-ciso" },
   { name: "Audit, Compliance & Training", link: "/audit-compliance-training" },
   { name: "VAPT services", link: "/vapt-services" },
   { name: "Outcome-Driven Metrics (ODM)", link: "/outcome-driven-metrics-odm" },
-  { name: "Phishing Prevention Tool", link: "/phishing-prevention-tool" },
-  { name: "Decission Support System", link: "/decission-support-system" },
 ];
 
 function Header() {

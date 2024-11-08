@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "../ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import phishing from "../../assets/Products/phishing.png";
 import SecureKnowledgeManagement from "../../assets/Products/SecureKnowledgeManagement.png";

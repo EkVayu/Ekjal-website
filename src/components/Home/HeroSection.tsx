@@ -4,8 +4,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
+} from "../ui/carousel";
+import { Button } from "../ui/button";
 import Autoplay from "embla-carousel-autoplay";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -152,7 +152,6 @@ function HeroSection() {
                   className="rounded-2xl w-full h-full object-contain aspect-video mix-blend-overlay opacity-90"
                 />
                 {/* Add an overlay gradient */}
-               
               </motion.div>
             </CarouselItem>
           ))}
