@@ -193,7 +193,6 @@ const ContactUs = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              // whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               {loading ? "Sending..." : contactData.submitButton.text}
