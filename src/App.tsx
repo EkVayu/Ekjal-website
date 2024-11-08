@@ -13,7 +13,7 @@ import VirtualCisoPage from "./pages/Offerings/VirtualCisoPage";
 import AuditComplianceTrainingPage from "./pages/Offerings/Audit-Compliance-TrainingPage";
 import VAPTServicesPage from "./pages/Offerings/VAPT-ServicesPage";
 import ErrorPage from "./pages/Error";
-import ScrollToTopButton from "./components/Common/ScrollToTopButton ";
+import ScrollToTopButton from "./components/Common/ScrollToTopButton";
 import OutcomeDrivenMetrics from "./pages/Offerings/Outcome-Driven-Metrics";
 import PhishingPreventionTool from "./pages/Offerings/PhishingPreventionTool";
 import DecissionSupportSystem from "./pages/Offerings/DecissionSupportSystem";
