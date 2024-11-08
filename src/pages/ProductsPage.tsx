@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import HeroSection from "@/components/Products/HeroSection";
-import PhishingPreventionSection from "@/components/Products/PhishingPreventionSection";
-import SecureKnowledgeManagementSection from "@/components/Products/SecureKnowledgeManagementSection";
-import DecisionSupportSystemSection from "@/components/Products/DecisionSupportSystemSection";
-import SCMSecuritySection from "@/components/Products/SCMSecuritySection";
-import PredictiveMaintenanceSection from "@/components/Products/PredictiveMaintenanceSection";
+import HeroSection from "../components/Products/HeroSection";
+import PhishingPreventionSection from "../components/Products/PhishingPreventionSection";
+import SecureKnowledgeManagementSection from "../components/Products/SecureKnowledgeManagementSection";
+import DecisionSupportSystemSection from "../components/Products/DecisionSupportSystemSection";
+import SCMSecuritySection from "../components/Products/SCMSecuritySection";
+import PredictiveMaintenanceSection from "../components/Products/PredictiveMaintenanceSection";
 import { Link } from 'react-router-dom';
 
 const fadeInUp = {

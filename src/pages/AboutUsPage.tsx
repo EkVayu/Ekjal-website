@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import HeroSection from '@/components/AboutUs/HeroSection';
-import IntroductionSection from '@/components/AboutUs/IntroductionSection';
-import OurStorySection from '@/components/AboutUs/OurStorySection';
-import AnimatedCardsSection from '@/components/AboutUs/AnimatedCardsSection';
-import VisionMissionSection from '@/components/AboutUs/VisionMissionSection';
-import ClientsSection from '@/components/AboutUs/ClientsSection';
-import OurTeamsSection from '@/components/AboutUs/OurTeamsSection';
+import HeroSection from '../components/AboutUs/HeroSection';
+import IntroductionSection from '../components/AboutUs/IntroductionSection';
+import OurStorySection from '../components/AboutUs/OurStorySection';
+import AnimatedCardsSection from '../components/AboutUs/AnimatedCardsSection';
+import VisionMissionSection from '../components/AboutUs/VisionMissionSection';
+import ClientsSection from '../components/AboutUs/ClientsSection';
+import OurTeamsSection from '../components/AboutUs/OurTeamsSection';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
