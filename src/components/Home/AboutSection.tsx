@@ -1,5 +1,5 @@
 // AboutSection.js
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import image from "../../assets/Home-page-images/939c5da1-6097-4d5c-a0ec-6071a1ef12b4.jpg";

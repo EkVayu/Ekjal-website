@@ -4,8 +4,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
+} from "../ui/carousel";
+import { Button } from "../ui/button";
 import Autoplay from "embla-carousel-autoplay";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
