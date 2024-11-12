@@ -5,7 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-import { Button } from "../ui/button";
+// import { Button } from "../ui/button";
 import Autoplay from "embla-carousel-autoplay";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -133,12 +133,12 @@ function HeroSection() {
                   {item.paragraph}
                 </motion.p>
                 <motion.div variants={itemVariants}>
-                  <Button
+                  {/* <Button
                     size="lg"
                     className="bg-primary text-primary-foreground text-lg px-8 py-3 rounded-md shadow-lg hover:shadow-xl"
                   >
                     Learn More
-                  </Button>
+                  </Button> */}
                 </motion.div>
               </motion.div>
 
