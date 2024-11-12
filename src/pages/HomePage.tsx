@@ -4,7 +4,7 @@ import CustomersSection from "../components/Home/CustomersSection";
 import HeroSection from "../components/Home/HeroSection"
 import OurCybersecurityCapabilities from "../components/Home/OurCybersecurityCapabilities";
 import ServicesSection from "../components/Home/ServicesSection";
-import TestimonialsSection from "../components/Home/TestimonialsSection";
+// import TestimonialsSection from "../components/Home/TestimonialsSection";
 
 function HomePage() {
   return (
@@ -13,7 +13,7 @@ function HomePage() {
       <AboutSection/>
       <ServicesSection />
       <OurCybersecurityCapabilities />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CustomersSection />
       <CustomersLocatedSection />
     </div>
